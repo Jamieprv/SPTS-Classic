@@ -1,1241 +1,1871 @@
--- Made by Jamie.
--- Version: 1.0
--- Instances:
-local SPTSGui = Instance.new("ScreenGui")
-local OPEN = Instance.new("TextButton")
-local UnSafeFR = Instance.new("Frame")
-local KButton = Instance.new("TextButton")
-local KButton2 = Instance.new("TextButton")
-local SafeMode = Instance.new("TextButton")
-local Name = Instance.new("TextBox")
-local KButton3 = Instance.new("TextButton")
-local KButton4 = Instance.new("TextButton")
-local KButton5 = Instance.new("TextButton")
-local SafeFR = Instance.new("Frame")
-local KButton6 = Instance.new("TextButton")
-local KButton7 = Instance.new("TextButton")
-local SafeMode_2 = Instance.new("TextButton")
-local Name_2 = Instance.new("TextBox")
-local KButton8 = Instance.new("TextButton")
-local KButton9 = Instance.new("TextButton")
-local KButton10 = Instance.new("TextButton")
-local Status = Instance.new("TextLabel")
-local Innocence = Instance.new("TextLabel")
-local Villain = Instance.new("TextLabel")
-local Hero = Instance.new("TextLabel")
-local Fist = Instance.new("TextLabel")
-local Body = Instance.new("TextLabel")
-local Psychic = Instance.new("TextLabel")
-local Jump = Instance.new("TextLabel")
-local Speed = Instance.new("TextLabel")
-local Tokens = Instance.new("TextLabel")
-local AliveTime = Instance.new("TextLabel")
-local Rep = Instance.new("TextLabel")
-local LocationsB = Instance.new("TextButton")
-local PLocation = Instance.new("Frame")
-local Psychic1 = Instance.new("TextButton")
-local RequestTxt = Instance.new("TextLabel")
-local FLocation = Instance.new("Frame")
-local Fist1 = Instance.new("TextButton")
-local Fist2 = Instance.new("TextButton")
-local Fist3 = Instance.new("TextButton")
-local Fist4 = Instance.new("TextButton")
-local Fist5 = Instance.new("TextButton")
-local RequestTxt_2 = Instance.new("TextLabel")
-local RequestTxt_3 = Instance.new("TextLabel")
-local RequestTxt_4 = Instance.new("TextLabel")
-local BLocation = Instance.new("Frame")
-local Body1 = Instance.new("TextButton")
-local Body2 = Instance.new("TextButton")
-local Body3 = Instance.new("TextButton")
-local Body4 = Instance.new("TextButton")
-local Body5 = Instance.new("TextButton")
-local RequestTxt_5 = Instance.new("TextLabel")
-local RequestTxt_6 = Instance.new("TextLabel")
-local Body6 = Instance.new("TextButton")
-local RequestTxt_7 = Instance.new("TextLabel")
-local RequestTxt_8 = Instance.new("TextLabel")
-local RequestTxt_9 = Instance.new("TextLabel")
-local RequestTxt_10 = Instance.new("TextLabel")
-local QLOCATION = Instance.new("Frame")
-local Other1 = Instance.new("TextButton")
-local Other2 = Instance.new("TextButton")
-local Credits = Instance.new("TextButton")
-local CreditsFrame = Instance.new("Frame")
-local CreditsTxt = Instance.new("TextLabel")
-local CreditsTxt_2 = Instance.new("TextLabel")
-local LocationFrame = Instance.new("Frame")
-local FistL = Instance.new("TextButton")
-local BodyL = Instance.new("TextButton")
-local PsychicL = Instance.new("TextButton")
-local QuestionL = Instance.new("TextButton")
-local CloseL = Instance.new("TextButton")
-local Healthbar = Instance.new("TextButton")
-local Posbar = Instance.new("TextButton")
-local Selected = Instance.new("StringValue")
-local Selected2 = Instance.new("StringValue")
---Properties:
-SPTSGui.Name = "SPTSGui"
-SPTSGui.Parent = game.CoreGui
-Selected.Value = "UnSafeFR"
-Selected2.Value = "None"
-Selected.Name = "Selected"
-Selected2.Name = "Selected2"
+repeat wait() until game:IsLoaded()
+-- Open the Dev Console (F9) to read information about the GUI --
 
-OPEN.Name = "OPEN"
-OPEN.Parent = SPTSGui
-OPEN.BackgroundColor3 = Color3.new(1, 0, 0)
-OPEN.BackgroundTransparency = 0.5
-OPEN.BorderColor3 = Color3.new(0, 0, 0)
-OPEN.BorderSizePixel = 2
-OPEN.Position = UDim2.new(0, 0, 0.495029979, 0)
-OPEN.Size = UDim2.new(0.0998007953, 0, 0.0500000045, 0)
-OPEN.Selected = true
-OPEN.Font = Enum.Font.Cartoon
-OPEN.Text = "KILL"
-OPEN.TextColor3 = Color3.new(1, 0.2, 0)
-OPEN.TextScaled = true
-OPEN.TextSize = 14
-OPEN.TextStrokeTransparency = 0
-OPEN.TextWrapped = true
+print("\nSuper Power Training Simulator - Jamie")
 
-UnSafeFR.Name = "UnSafeFR"
-UnSafeFR.Parent = SPTSGui
-UnSafeFR.BackgroundColor3 = Color3.new(0, 0, 0)
-UnSafeFR.BackgroundTransparency = 0.30000001192093
-UnSafeFR.BorderColor3 = Color3.new(1, 0, 0)
-UnSafeFR.BorderSizePixel = 4
-UnSafeFR.Position = UDim2.new(0.24960126, 0, 0.31184411, 0)
-UnSafeFR.Size = UDim2.new(0.40271011, 0, 0.481259316, 0)
-UnSafeFR.Visible = false
+local plr = game:GetService("Players").LocalPlayer
+local char = plr.Character
+local root = char.HumanoidRootPart
+local Plrs = game:GetService("Players")
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+local UIS = game:GetService'UserInputService'
+local RepStor = game:GetService("ReplicatedStorage")
+local CoreGui = game:GetService("CoreGui")
+local Run = game:GetService("RunService")
+local mouse = game.Players.LocalPlayer:GetMouse()
+local human = plr.Character:WaitForChild("Humanoid")
 
-KButton.Name = "KButton"
-KButton.Parent = UnSafeFR
-KButton.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton.BackgroundTransparency = 0.5
-KButton.BorderColor3 = Color3.new(1, 0, 0)
-KButton.BorderSizePixel = 2
-KButton.Position = UDim2.new(0.0634417087, 0, 0.164775103, 0)
-KButton.Size = UDim2.new(0.867684603, 0, 0.109190084, 0)
-KButton.Selected = true
-KButton.Font = Enum.Font.Cartoon
-KButton.Text = "KILL "
-KButton.TextColor3 = Color3.new(1, 0, 0)
-KButton.TextScaled = true
-KButton.TextSize = 14
-KButton.TextStrokeTransparency = 0
-KButton.TextWrapped = true
-
-KButton2.Name = "KButton2"
-KButton2.Parent = UnSafeFR
-KButton2.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton2.BackgroundTransparency = 0.5
-KButton2.BorderColor3 = Color3.new(1, 0.4, 0)
-KButton2.BorderSizePixel = 2
-KButton2.Position = UDim2.new(0.0634417087, 0, 0.415014476, 0)
-KButton2.Size = UDim2.new(0.867684901, 0, 0.0998442471, 0)
-KButton2.Selected = true
-KButton2.Font = Enum.Font.Cartoon
-KButton2.Text = "KILL ALL (Risk)"
-KButton2.TextColor3 = Color3.new(1, 0.501961, 0)
-KButton2.TextScaled = true
-KButton2.TextSize = 14
-KButton2.TextStrokeTransparency = 0
-KButton2.TextWrapped = true
-
-SafeMode.Name = "SafeMode"
-SafeMode.Parent = UnSafeFR
-SafeMode.BackgroundColor3 = Color3.new(0, 0, 0)
-SafeMode.BackgroundTransparency = 0.5
-SafeMode.BorderColor3 = Color3.new(1, 0, 0)
-SafeMode.BorderSizePixel = 3
-SafeMode.Position = UDim2.new(0.107057884, 0, 0.0293614306, 0)
-SafeMode.Size = UDim2.new(0.77648741, 0, 0.0760902986, 0)
-SafeMode.Selected = true
-SafeMode.Font = Enum.Font.Cartoon
-SafeMode.Text = "Safe Mode OFF"
-SafeMode.TextColor3 = Color3.new(1, 0, 0)
-SafeMode.TextScaled = true
-SafeMode.TextSize = 14
-SafeMode.TextStrokeTransparency = 0
-SafeMode.TextWrapped = true
-
-Name.Name = "Name"
-Name.Parent = UnSafeFR
-Name.BackgroundColor3 = Color3.new(0, 0, 0)
-Name.BackgroundTransparency = 0.5
-Name.BorderColor3 = Color3.new(1, 0, 0)
-Name.BorderSizePixel = 2
-Name.Position = UDim2.new(0.0634417087, 0, 0.300069571, 0)
-Name.Size = UDim2.new(0.867684662, 0, 0.0868584365, 0)
-Name.Font = Enum.Font.SourceSans
-Name.PlaceholderColor3 = Color3.new(1, 0, 0)
-Name.PlaceholderText = "Name"
-Name.Text = "Name"
-Name.TextColor3 = Color3.new(1, 0, 0)
-Name.TextScaled = true
-Name.TextSize = 14
-Name.TextStrokeTransparency = 0
-Name.TextWrapped = true
-
-KButton3.Name = "KButton3"
-KButton3.Parent = UnSafeFR
-KButton3.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton3.BackgroundTransparency = 0.5
-KButton3.BorderColor3 = Color3.new(1, 0.262745, 0.262745)
-KButton3.BorderSizePixel = 2
-KButton3.Position = UDim2.new(0.0594766028, 0, 0.604027569, 0)
-KButton3.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton3.Selected = true
-KButton3.Font = Enum.Font.Cartoon
-KButton3.Text = "KILL INNOCENT (Risk)"
-KButton3.TextColor3 = Color3.new(1, 0.545098, 0.545098)
-KButton3.TextScaled = true
-KButton3.TextSize = 14
-KButton3.TextStrokeTransparency = 0
-KButton3.TextWrapped = true
-
-KButton4.Name = "KButton4"
-KButton4.Parent = UnSafeFR
-KButton4.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton4.BackgroundTransparency = 0.5
-KButton4.BorderColor3 = Color3.new(1, 0.8, 0)
-KButton4.BorderSizePixel = 2
-KButton4.Position = UDim2.new(0.0634417087, 0, 0.719292402, 0)
-KButton4.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton4.Selected = true
-KButton4.Font = Enum.Font.Cartoon
-KButton4.Text = "KILL HEROS (Risk)"
-KButton4.TextColor3 = Color3.new(1, 0.717647, 0)
-KButton4.TextScaled = true
-KButton4.TextSize = 14
-KButton4.TextStrokeTransparency = 0
-KButton4.TextWrapped = true
-
-KButton5.Name = "KButton5"
-KButton5.Parent = UnSafeFR
-KButton5.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton5.BackgroundTransparency = 0.5
-KButton5.BorderColor3 = Color3.new(1, 0.403922, 0.00392157)
-KButton5.BorderSizePixel = 2
-KButton5.Position = UDim2.new(0.0634417087, 0, 0.831441939, 0)
-KButton5.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton5.Selected = true
-KButton5.Font = Enum.Font.Cartoon
-KButton5.Text = "KILL VILLIANS (Risk)"
-KButton5.TextColor3 = Color3.new(1, 0, 0)
-KButton5.TextScaled = true
-KButton5.TextSize = 14
-KButton5.TextStrokeColor3 = Color3.new(1, 0.364706, 0)
-KButton5.TextStrokeTransparency = 0
-KButton5.TextWrapped = true
-
-SafeFR.Name = "SafeFR"
-SafeFR.Parent = SPTSGui
-SafeFR.BackgroundColor3 = Color3.new(0, 0, 0)
-SafeFR.BackgroundTransparency = 0.30000001192093
-SafeFR.BorderColor3 = Color3.new(0, 0.133333, 1)
-SafeFR.BorderSizePixel = 4
-SafeFR.Position = UDim2.new(0.24960126, 0, 0.31184411, 0)
-SafeFR.Size = UDim2.new(0.40271011, 0, 0.481259316, 0)
-SafeFR.Visible = false
-
-KButton6.Name = "KButton6"
-KButton6.Parent = SafeFR
-KButton6.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton6.BackgroundTransparency = 0.5
-KButton6.BorderColor3 = Color3.new(0, 0.4, 1)
-KButton6.BorderSizePixel = 2
-KButton6.Position = UDim2.new(0.0634417087, 0, 0.164775103, 0)
-KButton6.Size = UDim2.new(0.867684603, 0, 0.109190084, 0)
-KButton6.Selected = true
-KButton6.Font = Enum.Font.Cartoon
-KButton6.Text = "KILL "
-KButton6.TextColor3 = Color3.new(0.00392157, 0.65098, 1)
-KButton6.TextScaled = true
-KButton6.TextSize = 14
-KButton6.TextStrokeTransparency = 0
-KButton6.TextWrapped = true
-
-KButton7.Name = "KButton7"
-KButton7.Parent = SafeFR
-KButton7.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton7.BackgroundTransparency = 0.5
-KButton7.BorderColor3 = Color3.new(0, 0.568627, 1)
-KButton7.BorderSizePixel = 2
-KButton7.Position = UDim2.new(0.0634417087, 0, 0.415014476, 0)
-KButton7.Size = UDim2.new(0.867684901, 0, 0.0998442471, 0)
-KButton7.Selected = true
-KButton7.Font = Enum.Font.Cartoon
-KButton7.Text = "KILL ALL"
-KButton7.TextColor3 = Color3.new(0, 0.733333, 1)
-KButton7.TextScaled = true
-KButton7.TextSize = 14
-KButton7.TextStrokeTransparency = 0
-KButton7.TextWrapped = true
-
-SafeMode_2.Name = "SafeMode"
-SafeMode_2.Parent = SafeFR
-SafeMode_2.BackgroundColor3 = Color3.new(0, 0, 0)
-SafeMode_2.BackgroundTransparency = 0.5
-SafeMode_2.BorderColor3 = Color3.new(0.0823529, 0, 1)
-SafeMode_2.BorderSizePixel = 3
-SafeMode_2.Position = UDim2.new(0.107057884, 0, 0.0293614306, 0)
-SafeMode_2.Size = UDim2.new(0.77648741, 0, 0.0760902986, 0)
-SafeMode_2.Selected = true
-SafeMode_2.Font = Enum.Font.Cartoon
-SafeMode_2.Text = "Safe Mode ON"
-SafeMode_2.TextColor3 = Color3.new(0.0666667, 0, 1)
-SafeMode_2.TextScaled = true
-SafeMode_2.TextSize = 14
-SafeMode_2.TextStrokeTransparency = 0
-SafeMode_2.TextWrapped = true
-
-Name_2.Name = "Name"
-Name_2.Parent = SafeFR
-Name_2.BackgroundColor3 = Color3.new(0, 0, 0)
-Name_2.BackgroundTransparency = 0.5
-Name_2.BorderColor3 = Color3.new(0, 0.784314, 1)
-Name_2.BorderSizePixel = 2
-Name_2.Position = UDim2.new(0.0634417087, 0, 0.300069571, 0)
-Name_2.Size = UDim2.new(0.867684662, 0, 0.0868584365, 0)
-Name_2.Font = Enum.Font.SourceSans
-Name_2.PlaceholderColor3 = Color3.new(0.027451, 0.823529, 1)
-Name_2.PlaceholderText = "Name"
-Name_2.Text = "Name"
-Name_2.TextColor3 = Color3.new(0.027451, 0.823529, 1)
-Name_2.TextScaled = true
-Name_2.TextSize = 14
-Name_2.TextStrokeTransparency = 0
-Name_2.TextWrapped = true
-
-KButton8.Name = "KButton8"
-KButton8.Parent = SafeFR
-KButton8.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton8.BackgroundTransparency = 0.5
-KButton8.BorderColor3 = Color3.new(0.0196078, 0.329412, 1)
-KButton8.BorderSizePixel = 2
-KButton8.Position = UDim2.new(0.0594766028, 0, 0.604027569, 0)
-KButton8.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton8.Selected = true
-KButton8.Font = Enum.Font.Cartoon
-KButton8.Text = "KILL INNOCENT"
-KButton8.TextColor3 = Color3.new(0, 0, 1)
-KButton8.TextScaled = true
-KButton8.TextSize = 14
-KButton8.TextStrokeTransparency = 0
-KButton8.TextWrapped = true
-
-KButton9.Name = "KButton9"
-KButton9.Parent = SafeFR
-KButton9.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton9.BackgroundTransparency = 0.5
-KButton9.BorderColor3 = Color3.new(0, 0.952941, 1)
-KButton9.BorderSizePixel = 2
-KButton9.Position = UDim2.new(0.0634417087, 0, 0.719292402, 0)
-KButton9.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton9.Selected = true
-KButton9.Font = Enum.Font.Cartoon
-KButton9.Text = "KILL HEROS"
-KButton9.TextColor3 = Color3.new(0.00784314, 1, 0.968628)
-KButton9.TextScaled = true
-KButton9.TextSize = 14
-KButton9.TextStrokeTransparency = 0
-KButton9.TextWrapped = true
-
-KButton10.Name = "KButton10"
-KButton10.Parent = SafeFR
-KButton10.BackgroundColor3 = Color3.new(0, 0, 0)
-KButton10.BackgroundTransparency = 0.5
-KButton10.BorderColor3 = Color3.new(0, 0.0980392, 1)
-KButton10.BorderSizePixel = 2
-KButton10.Position = UDim2.new(0.0634417087, 0, 0.831441939, 0)
-KButton10.Size = UDim2.new(0.867684662, 0, 0.087383233, 0)
-KButton10.Selected = true
-KButton10.Font = Enum.Font.Cartoon
-KButton10.Text = "KILL VILLIANS"
-KButton10.TextColor3 = Color3.new(0.784314, 0, 1)
-KButton10.TextScaled = true
-KButton10.TextSize = 14
-KButton10.TextStrokeColor3 = Color3.new(0.113725, 0, 1)
-KButton10.TextStrokeTransparency = 0
-KButton10.TextWrapped = true
-
-LocationsB.Name = "LocationsB"
-LocationsB.Parent = SPTSGui
-LocationsB.BackgroundColor3 = Color3.new(1, 0, 0)
-LocationsB.BackgroundTransparency = 0.5
-LocationsB.BorderColor3 = Color3.new(0, 0, 0)
-LocationsB.BorderSizePixel = 2
-LocationsB.Position = UDim2.new(0, 0, 0.55697149, 0)
-LocationsB.Size = UDim2.new(0.0998007953, 0, 0.0500000045, 0)
-LocationsB.Selected = true
-LocationsB.Font = Enum.Font.Cartoon
-LocationsB.Text = "Locations"
-LocationsB.TextColor3 = Color3.new(1, 0.2, 0)
-LocationsB.TextScaled = true
-LocationsB.TextSize = 14
-LocationsB.TextStrokeTransparency = 0
-LocationsB.TextWrapped = true
-
-PLocation.Name = "PLocation"
-PLocation.Parent = SPTSGui
-PLocation.BackgroundColor3 = Color3.new(0, 0, 0)
-PLocation.BackgroundTransparency = 0.30000001192093
-PLocation.BorderColor3 = Color3.new(1, 0, 0)
-PLocation.BorderSizePixel = 4
-PLocation.Position = UDim2.new(0.358764619, 0, 0.469040424, 0)
-PLocation.Size = UDim2.new(0.172431216, 0, 0.186131969, 0)
-PLocation.Visible = false
-
-Psychic1.Name = "Psychic1"
-Psychic1.Parent = PLocation
-Psychic1.BackgroundColor3 = Color3.new(0, 0, 0)
-Psychic1.BackgroundTransparency = 0.5
-Psychic1.BorderColor3 = Color3.new(1, 0, 0)
-Psychic1.BorderSizePixel = 3
-Psychic1.Position = UDim2.new(0.0423633605, 0, 0.0692745224, 0)
-Psychic1.Size = UDim2.new(0.914631486, 0, 0.28513512, 0)
-Psychic1.Selected = true
-Psychic1.Font = Enum.Font.Cartoon
-Psychic1.Text = "Waterfall 100-1000x"
-Psychic1.TextColor3 = Color3.new(1, 0, 0)
-Psychic1.TextScaled = true
-Psychic1.TextSize = 14
-Psychic1.TextStrokeTransparency = 0
-Psychic1.TextWrapped = true
-
-RequestTxt.Name = "RequestTxt"
-RequestTxt.Parent = PLocation
-RequestTxt.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt.BackgroundTransparency = 1
-RequestTxt.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt.Position = UDim2.new(1.41023165e-07, 0, 0.359645456, 0)
-RequestTxt.Size = UDim2.new(0.999999762, 0, 0.640354812, 0)
-RequestTxt.Font = Enum.Font.Cartoon
-RequestTxt.Text = "1m - 1t Psychic"
-RequestTxt.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt.TextScaled = true
-RequestTxt.TextSize = 14
-RequestTxt.TextStrokeTransparency = 0
-RequestTxt.TextWrapped = true
-
-FLocation.Name = "FLocation"
-FLocation.Parent = SPTSGui
-FLocation.BackgroundColor3 = Color3.new(0, 0, 0)
-FLocation.BackgroundTransparency = 0.30000001192093
-FLocation.BorderColor3 = Color3.new(1, 0, 0)
-FLocation.BorderSizePixel = 4
-FLocation.Position = UDim2.new(0.354780555, 0, 0.217391282, 0)
-FLocation.Size = UDim2.new(0.172431216, 0, 0.518740594, 0)
-FLocation.Visible = false
-
-Fist1.Name = "Fist1"
-Fist1.Parent = FLocation
-Fist1.BackgroundColor3 = Color3.new(0, 0, 0)
-Fist1.BackgroundTransparency = 0.5
-Fist1.BorderColor3 = Color3.new(1, 0, 0)
-Fist1.BorderSizePixel = 3
-Fist1.Position = UDim2.new(0.107058018, 0, 0.0462624505, 0)
-Fist1.Size = UDim2.new(0.776000082, 0, 0.0835375637, 0)
-Fist1.Selected = true
-Fist1.Font = Enum.Font.Cartoon
-Fist1.Text = "Stone 10x"
-Fist1.TextColor3 = Color3.new(1, 0, 0)
-Fist1.TextScaled = true
-Fist1.TextSize = 14
-Fist1.TextStrokeTransparency = 0
-Fist1.TextWrapped = true
-
-Fist2.Name = "Fist2"
-Fist2.Parent = FLocation
-Fist2.BackgroundColor3 = Color3.new(0, 0, 0)
-Fist2.BackgroundTransparency = 0.5
-Fist2.BorderColor3 = Color3.new(1, 0, 0)
-Fist2.BorderSizePixel = 3
-Fist2.Position = UDim2.new(0.11167907, 0, 0.163441747, 0)
-Fist2.Size = UDim2.new(0.776000082, 0, 0.0893179104, 0)
-Fist2.Selected = true
-Fist2.Font = Enum.Font.Cartoon
-Fist2.Text = "Crystal 100x"
-Fist2.TextColor3 = Color3.new(1, 0, 0)
-Fist2.TextScaled = true
-Fist2.TextSize = 14
-Fist2.TextStrokeTransparency = 0
-Fist2.TextWrapped = true
-
-Fist3.Name = "Fist3"
-Fist3.Parent = FLocation
-Fist3.BackgroundColor3 = Color3.new(0, 0, 0)
-Fist3.BackgroundTransparency = 0.5
-Fist3.BorderColor3 = Color3.new(1, 0, 0)
-Fist3.BorderSizePixel = 3
-Fist3.Position = UDim2.new(0.107058018, 0, 0.315028936, 0)
-Fist3.Size = UDim2.new(0.776000082, 0, 0.101452366, 0)
-Fist3.Selected = true
-Fist3.Font = Enum.Font.Cartoon
-Fist3.Text = "Green Planet 200x"
-Fist3.TextColor3 = Color3.new(1, 0, 0)
-Fist3.TextScaled = true
-Fist3.TextSize = 14
-Fist3.TextStrokeTransparency = 0
-Fist3.TextWrapped = true
-
-Fist4.Name = "Fist4"
-Fist4.Parent = FLocation
-Fist4.BackgroundColor3 = Color3.new(0, 0, 0)
-Fist4.BackgroundTransparency = 0.5
-Fist4.BorderColor3 = Color3.new(1, 0, 0)
-Fist4.BorderSizePixel = 3
-Fist4.Position = UDim2.new(0.11167907, 0, 0.543387294, 0)
-Fist4.Size = UDim2.new(0.776000082, 0, 0.0950982645, 0)
-Fist4.Selected = true
-Fist4.Font = Enum.Font.Cartoon
-Fist4.Text = "Blue Planet 500x"
-Fist4.TextColor3 = Color3.new(1, 0, 0)
-Fist4.TextScaled = true
-Fist4.TextSize = 14
-Fist4.TextStrokeTransparency = 0
-Fist4.TextWrapped = true
-
-Fist5.Name = "Fist5"
-Fist5.Parent = FLocation
-Fist5.BackgroundColor3 = Color3.new(0, 0, 0)
-Fist5.BackgroundTransparency = 0.5
-Fist5.BorderColor3 = Color3.new(1, 0, 0)
-Fist5.BorderSizePixel = 3
-Fist5.Position = UDim2.new(0.107058026, 0, 0.757615149, 0)
-Fist5.Size = UDim2.new(0.776000082, 0, 0.0865069479, 0)
-Fist5.Selected = true
-Fist5.Font = Enum.Font.Cartoon
-Fist5.Text = "Sun 1000x"
-Fist5.TextColor3 = Color3.new(1, 0, 0)
-Fist5.TextScaled = true
-Fist5.TextSize = 14
-Fist5.TextStrokeTransparency = 0
-Fist5.TextWrapped = true
-
-RequestTxt_2.Name = "RequestTxt"
-RequestTxt_2.Parent = FLocation
-RequestTxt_2.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_2.BackgroundTransparency = 1
-RequestTxt_2.Position = UDim2.new(0.109605886, 0, 0.433915764, 0)
-RequestTxt_2.Size = UDim2.new(0.773452282, 0, 0.0848705098, 0)
-RequestTxt_2.Font = Enum.Font.Cartoon
-RequestTxt_2.Text = "1B Fist"
-RequestTxt_2.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_2.TextScaled = true
-RequestTxt_2.TextSize = 14
-RequestTxt_2.TextStrokeTransparency = 0
-RequestTxt_2.TextWrapped = true
-
-RequestTxt_3.Name = "RequestTxt"
-RequestTxt_3.Parent = FLocation
-RequestTxt_3.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_3.BackgroundTransparency = 1
-RequestTxt_3.Position = UDim2.new(0.104984842, 0, 0.659349322, 0)
-RequestTxt_3.Size = UDim2.new(0.773452282, 0, 0.0848705098, 0)
-RequestTxt_3.Font = Enum.Font.Cartoon
-RequestTxt_3.Text = "100B Fist"
-RequestTxt_3.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_3.TextScaled = true
-RequestTxt_3.TextSize = 14
-RequestTxt_3.TextStrokeTransparency = 0
-RequestTxt_3.TextWrapped = true
-
-RequestTxt_4.Name = "RequestTxt"
-RequestTxt_4.Parent = FLocation
-RequestTxt_4.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_4.BackgroundTransparency = 1
-RequestTxt_4.Position = UDim2.new(0.104984842, 0, 0.867441833, 0)
-RequestTxt_4.Size = UDim2.new(0.773452282, 0, 0.0848705098, 0)
-RequestTxt_4.Font = Enum.Font.Cartoon
-RequestTxt_4.Text = "10T Fist"
-RequestTxt_4.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_4.TextScaled = true
-RequestTxt_4.TextSize = 14
-RequestTxt_4.TextStrokeTransparency = 0
-RequestTxt_4.TextWrapped = true
-
-BLocation.Name = "BLocation"
-BLocation.Parent = SPTSGui
-BLocation.BackgroundColor3 = Color3.new(0, 0, 0)
-BLocation.BackgroundTransparency = 0.30000001192093
-BLocation.BorderColor3 = Color3.new(1, 0, 0)
-BLocation.BorderSizePixel = 4
-BLocation.Position = UDim2.new(0.354780555, 0, 0.143928006, 0)
-BLocation.Size = UDim2.new(0.172431216, 0, 0.592203915, 0)
-BLocation.Visible = false
-
-Body1.Name = "Body1"
-Body1.Parent = BLocation
-Body1.BackgroundColor3 = Color3.new(0, 0, 0)
-Body1.BackgroundTransparency = 0.5
-Body1.BorderColor3 = Color3.new(1, 0, 0)
-Body1.BorderSizePixel = 3
-Body1.Position = UDim2.new(0.107058018, 0, 0.0209459905, 0)
-Body1.Size = UDim2.new(0.776000082, 0, 0.0734109804, 0)
-Body1.Selected = true
-Body1.Font = Enum.Font.Cartoon
-Body1.Text = "Cold Water 5x"
-Body1.TextColor3 = Color3.new(1, 0, 0)
-Body1.TextScaled = true
-Body1.TextSize = 14
-Body1.TextStrokeTransparency = 0
-Body1.TextWrapped = true
-
-Body2.Name = "Body2"
-Body2.Parent = BLocation
-Body2.BackgroundColor3 = Color3.new(0, 0, 0)
-Body2.BackgroundTransparency = 0.5
-Body2.BorderColor3 = Color3.new(1, 0, 0)
-Body2.BorderSizePixel = 3
-Body2.Position = UDim2.new(0.11167907, 0, 0.163441762, 0)
-Body2.Size = UDim2.new(0.776000082, 0, 0.0715963915, 0)
-Body2.Selected = true
-Body2.Font = Enum.Font.Cartoon
-Body2.Text = "Fire 10x"
-Body2.TextColor3 = Color3.new(1, 0, 0)
-Body2.TextScaled = true
-Body2.TextSize = 14
-Body2.TextStrokeTransparency = 0
-Body2.TextWrapped = true
-
-Body3.Name = "Body3"
-Body3.Parent = BLocation
-Body3.BackgroundColor3 = Color3.new(0, 0, 0)
-Body3.BackgroundTransparency = 0.5
-Body3.BorderColor3 = Color3.new(1, 0, 0)
-Body3.BorderSizePixel = 3
-Body3.Position = UDim2.new(0.107058018, 0, 0.315028936, 0)
-Body3.Size = UDim2.new(0.776000082, 0, 0.0697812513, 0)
-Body3.Selected = true
-Body3.Font = Enum.Font.Cartoon
-Body3.Text = "Ice mountain 20x"
-Body3.TextColor3 = Color3.new(1, 0, 0)
-Body3.TextScaled = true
-Body3.TextSize = 14
-Body3.TextStrokeTransparency = 0
-Body3.TextWrapped = true
-
-Body4.Name = "Body4"
-Body4.Parent = BLocation
-Body4.BackgroundColor3 = Color3.new(0, 0, 0)
-Body4.BackgroundTransparency = 0.5
-Body4.BorderColor3 = Color3.new(1, 0, 0)
-Body4.BorderSizePixel = 3
-Body4.Position = UDim2.new(0.102436975, 0, 0.462374628, 0)
-Body4.Size = UDim2.new(0.776000082, 0, 0.0723134577, 0)
-Body4.Selected = true
-Body4.Font = Enum.Font.Cartoon
-Body4.Text = "Tornado 50x"
-Body4.TextColor3 = Color3.new(1, 0, 0)
-Body4.TextScaled = true
-Body4.TextSize = 14
-Body4.TextStrokeTransparency = 0
-Body4.TextWrapped = true
-
-Body5.Name = "Body5"
-Body5.Parent = BLocation
-Body5.BackgroundColor3 = Color3.new(0, 0, 0)
-Body5.BackgroundTransparency = 0.5
-Body5.BorderColor3 = Color3.new(1, 0, 0)
-Body5.BorderSizePixel = 3
-Body5.Position = UDim2.new(0.111679062, 0, 0.605716407, 0)
-Body5.Size = UDim2.new(0.776000082, 0, 0.0682064518, 0)
-Body5.Selected = true
-Body5.Font = Enum.Font.Cartoon
-Body5.Text = "Vulcano 100x"
-Body5.TextColor3 = Color3.new(1, 0, 0)
-Body5.TextScaled = true
-Body5.TextSize = 14
-Body5.TextStrokeTransparency = 0
-Body5.TextWrapped = true
-
-RequestTxt_5.Name = "RequestTxt"
-RequestTxt_5.Parent = BLocation
-RequestTxt_5.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_5.BackgroundTransparency = 1
-RequestTxt_5.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_5.Position = UDim2.new(0.104984835, 0, 0.0921436176, 0)
-RequestTxt_5.Size = UDim2.new(0.773452282, 0, 0.0712981373, 0)
-RequestTxt_5.Font = Enum.Font.Cartoon
-RequestTxt_5.Text = "100 Body Req"
-RequestTxt_5.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_5.TextScaled = true
-RequestTxt_5.TextSize = 14
-RequestTxt_5.TextStrokeTransparency = 0
-RequestTxt_5.TextWrapped = true
-
-RequestTxt_6.Name = "RequestTxt"
-RequestTxt_6.Parent = BLocation
-RequestTxt_6.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_6.BackgroundTransparency = 1
-RequestTxt_6.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_6.Position = UDim2.new(0, 0, 0.824403822, 0)
-RequestTxt_6.Size = UDim2.new(0.999999702, 0, 0.0848705024, 0)
-RequestTxt_6.Font = Enum.Font.Cartoon
-RequestTxt_6.Text = "10b - 10t Body Req"
-RequestTxt_6.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_6.TextScaled = true
-RequestTxt_6.TextSize = 14
-RequestTxt_6.TextStrokeTransparency = 0
-RequestTxt_6.TextWrapped = true
-
-Body6.Name = "Body6"
-Body6.Parent = BLocation
-Body6.BackgroundColor3 = Color3.new(0, 0, 0)
-Body6.BackgroundTransparency = 0.5
-Body6.BorderColor3 = Color3.new(1, 0, 0)
-Body6.BorderSizePixel = 3
-Body6.Position = UDim2.new(0.111679062, 0, 0.757615149, 0)
-Body6.Size = UDim2.new(0.776000082, 0, 0.0682064518, 0)
-Body6.Selected = true
-Body6.Font = Enum.Font.Cartoon
-Body6.Text = "Souls 200-1000x"
-Body6.TextColor3 = Color3.new(1, 0, 0)
-Body6.TextScaled = true
-Body6.TextSize = 14
-Body6.TextStrokeTransparency = 0
-Body6.TextWrapped = true
-
-RequestTxt_7.Name = "RequestTxt"
-RequestTxt_7.Parent = BLocation
-RequestTxt_7.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_7.BackgroundTransparency = 1
-RequestTxt_7.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_7.Position = UDim2.new(0.11422693, 0, 0.233915776, 0)
-RequestTxt_7.Size = UDim2.new(0.773452282, 0, 0.0712981373, 0)
-RequestTxt_7.Font = Enum.Font.Cartoon
-RequestTxt_7.Text = "10k Body Req"
-RequestTxt_7.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_7.TextScaled = true
-RequestTxt_7.TextSize = 14
-RequestTxt_7.TextStrokeTransparency = 0
-RequestTxt_7.TextWrapped = true
-
-RequestTxt_8.Name = "RequestTxt"
-RequestTxt_8.Parent = BLocation
-RequestTxt_8.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_8.BackgroundTransparency = 1
-RequestTxt_8.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_8.Position = UDim2.new(0.104984835, 0, 0.38328287, 0)
-RequestTxt_8.Size = UDim2.new(0.773452282, 0, 0.0712981373, 0)
-RequestTxt_8.Font = Enum.Font.Cartoon
-RequestTxt_8.Text = "100k Body Req"
-RequestTxt_8.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_8.TextScaled = true
-RequestTxt_8.TextSize = 14
-RequestTxt_8.TextStrokeTransparency = 0
-RequestTxt_8.TextWrapped = true
-
-RequestTxt_9.Name = "RequestTxt"
-RequestTxt_9.Parent = BLocation
-RequestTxt_9.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_9.BackgroundTransparency = 1
-RequestTxt_9.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_9.Position = UDim2.new(0.104984835, 0, 0.532649994, 0)
-RequestTxt_9.Size = UDim2.new(0.773452282, 0, 0.0712981373, 0)
-RequestTxt_9.Font = Enum.Font.Cartoon
-RequestTxt_9.Text = "1m Body Req"
-RequestTxt_9.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_9.TextScaled = true
-RequestTxt_9.TextSize = 14
-RequestTxt_9.TextStrokeTransparency = 0
-RequestTxt_9.TextWrapped = true
-
-RequestTxt_10.Name = "RequestTxt"
-RequestTxt_10.Parent = BLocation
-RequestTxt_10.BackgroundColor3 = Color3.new(1, 1, 1)
-RequestTxt_10.BackgroundTransparency = 1
-RequestTxt_10.BorderColor3 = Color3.new(1, 0, 0)
-RequestTxt_10.Position = UDim2.new(0.100363791, 0, 0.671890497, 0)
-RequestTxt_10.Size = UDim2.new(0.773452282, 0, 0.0712981373, 0)
-RequestTxt_10.Font = Enum.Font.Cartoon
-RequestTxt_10.Text = "10m Body Req"
-RequestTxt_10.TextColor3 = Color3.new(1, 0, 0)
-RequestTxt_10.TextScaled = true
-RequestTxt_10.TextSize = 14
-RequestTxt_10.TextStrokeTransparency = 0
-RequestTxt_10.TextWrapped = true
-
-QLOCATION.Name = "QLOCATION"
-QLOCATION.Parent = SPTSGui
-QLOCATION.BackgroundColor3 = Color3.new(0, 0, 0)
-QLOCATION.BackgroundTransparency = 0.30000001192093
-QLOCATION.BorderColor3 = Color3.new(1, 0, 0)
-QLOCATION.BorderSizePixel = 4
-QLOCATION.Position = UDim2.new(0.358764619, 0, 0.469040424, 0)
-QLOCATION.Size = UDim2.new(0.172431216, 0, 0.186131969, 0)
-QLOCATION.Visible = false
-
-Other1.Name = "Other1"
-Other1.Parent = QLOCATION
-Other1.BackgroundColor3 = Color3.new(0, 0, 0)
-Other1.BackgroundTransparency = 0.5
-Other1.BorderColor3 = Color3.new(1, 0, 0)
-Other1.BorderSizePixel = 3
-Other1.Position = UDim2.new(0.0423633605, 0, 0.109548375, 0)
-Other1.Size = UDim2.new(0.914631486, 0, 0.28513512, 0)
-Other1.Selected = true
-Other1.Font = Enum.Font.Cartoon
-Other1.Text = "Question "
-Other1.TextColor3 = Color3.new(1, 0, 0)
-Other1.TextScaled = true
-Other1.TextSize = 14
-Other1.TextStrokeTransparency = 0
-Other1.TextWrapped = true
-
-Other2.Name = "Other2"
-Other2.Parent = QLOCATION
-Other2.BackgroundColor3 = Color3.new(0, 0, 0)
-Other2.BackgroundTransparency = 0.5
-Other2.BorderColor3 = Color3.new(1, 0, 0)
-Other2.BorderSizePixel = 3
-Other2.Position = UDim2.new(0.0423633605, 0, 0.520341694, 0)
-Other2.Size = UDim2.new(0.914631486, 0, 0.28513512, 0)
-Other2.Selected = true
-Other2.Font = Enum.Font.Cartoon
-Other2.Text = "Safe Point"
-Other2.TextColor3 = Color3.new(1, 0, 0)
-Other2.TextScaled = true
-Other2.TextSize = 14
-Other2.TextStrokeTransparency = 0
-Other2.TextWrapped = true
-
-Credits.Name = "Credits"
-Credits.Parent = SPTSGui
-Credits.BackgroundColor3 = Color3.new(1, 0, 0)
-Credits.BackgroundTransparency = 0.5
-Credits.BorderColor3 = Color3.new(0, 0, 0)
-Credits.BorderSizePixel = 2
-Credits.Position = UDim2.new(-0.000796812761, 0, 0.618440747, 0)
-Credits.Size = UDim2.new(0.0998007953, 0, 0.0500000045, 0)
-Credits.Selected = true
-Credits.Font = Enum.Font.Cartoon
-Credits.Text = "Credits"
-Credits.TextColor3 = Color3.new(1, 0.2, 0)
-Credits.TextScaled = true
-Credits.TextSize = 18
-Credits.TextStrokeTransparency = 0
-Credits.TextWrapped = true
-
-CreditsFrame.Name = "CreditsFrame"
-CreditsFrame.Parent = SPTSGui
-CreditsFrame.BackgroundColor3 = Color3.new(0, 0, 0)
-CreditsFrame.BackgroundTransparency = 0.30000001192093
-CreditsFrame.BorderColor3 = Color3.new(1, 0, 0)
-CreditsFrame.BorderSizePixel = 4
-CreditsFrame.Position = UDim2.new(0.24960126, 0, 0.31184411, 0)
-CreditsFrame.Size = UDim2.new(0.20271011, 0, 0.381259316, 0)
-CreditsFrame.Visible = false
-
-CreditsTxt.Name = "CreditsTxt"
-CreditsTxt.Parent = CreditsFrame
-CreditsTxt.BackgroundColor3 = Color3.new(1, 1, 1)
-CreditsTxt.BackgroundTransparency = 1
-CreditsTxt.BorderColor3 = Color3.new(1, 0, 0)
-CreditsTxt.Position = UDim2.new(0.0138505036, 0, -0.00172528916, 0)
-CreditsTxt.Size = UDim2.new(0.999999762, 0, 0.1071769, 0)
-CreditsTxt.Font = Enum.Font.Cartoon
-CreditsTxt.Text = "Script Version 1.3"
-CreditsTxt.TextColor3 = Color3.new(12, 0, 0)
-CreditsTxt.TextScaled = true
-CreditsTxt.TextSize = 28
-CreditsTxt.TextWrapped = true
-
-CreditsTxt_2.Name = "CreditsTxt"
-CreditsTxt_2.Parent = CreditsFrame
-CreditsTxt_2.BackgroundColor3 = Color3.new(1, 1, 1)
-CreditsTxt_2.BackgroundTransparency = 1
-CreditsTxt_2.BorderColor3 = Color3.new(1, 0, 0)
-CreditsTxt_2.Position = UDim2.new(0.0138505036, 0, 0.263072252, 0)
-CreditsTxt_2.Size = UDim2.new(0.999999762, 0, 0.1071769, 0)
-CreditsTxt_2.Font = Enum.Font.Cartoon
-CreditsTxt_2.Text = "GUI / Design : Jamie"
-CreditsTxt_2.TextColor3 = Color3.new(12, 0, 0)
-CreditsTxt_2.TextScaled = true
-CreditsTxt_2.TextSize = 20
-CreditsTxt_2.TextWrapped = true
-
-LocationFrame.Name = "LocationFrame"
-LocationFrame.Parent = SPTSGui
-LocationFrame.BackgroundColor3 = Color3.new(0, 0, 0)
-LocationFrame.BackgroundTransparency = 0.30000001192093
-LocationFrame.BorderColor3 = Color3.new(1, 0, 0)
-LocationFrame.BorderSizePixel = 4
-LocationFrame.Position = UDim2.new(0.173107252, 0, 0.284723848, 0)
-LocationFrame.Size = UDim2.new(0.172431216, 0, 0.451773822, 0)
-LocationFrame.Visible = false
-
-FistL.Name = "FistL"
-FistL.Parent = LocationFrame
-FistL.BackgroundColor3 = Color3.new(0, 0, 0)
-FistL.BackgroundTransparency = 0.5
-FistL.BorderColor3 = Color3.new(1, 0, 0)
-FistL.BorderSizePixel = 3
-FistL.Position = UDim2.new(0.0423633605, 0, 0.0692745298, 0)
-FistL.Size = UDim2.new(0.914631486, 0, 0.113408819, 0)
-FistL.Selected = true
-FistL.Font = Enum.Font.Cartoon
-FistL.Text = "Fist"
-FistL.TextColor3 = Color3.new(1, 0, 0)
-FistL.TextScaled = true
-FistL.TextSize = 14
-FistL.TextStrokeTransparency = 0
-FistL.TextWrapped = true
-
-BodyL.Name = "BodyL"
-BodyL.Parent = LocationFrame
-BodyL.BackgroundColor3 = Color3.new(0, 0, 0)
-BodyL.BackgroundTransparency = 0.5
-BodyL.BorderColor3 = Color3.new(1, 0, 0)
-BodyL.BorderSizePixel = 3
-BodyL.Position = UDim2.new(0.0423633605, 0, 0.21261847, 0)
-BodyL.Size = UDim2.new(0.914631486, 0, 0.113408819, 0)
-BodyL.Selected = true
-BodyL.Font = Enum.Font.Cartoon
-BodyL.Text = "Body"
-BodyL.TextColor3 = Color3.new(1, 0, 0)
-BodyL.TextScaled = true
-BodyL.TextSize = 14
-BodyL.TextStrokeTransparency = 0
-BodyL.TextWrapped = true
-
-PsychicL.Name = "PsychicL"
-PsychicL.Parent = LocationFrame
-PsychicL.BackgroundColor3 = Color3.new(0, 0, 0)
-PsychicL.BackgroundTransparency = 0.5
-PsychicL.BorderColor3 = Color3.new(1, 0, 0)
-PsychicL.BorderSizePixel = 3
-PsychicL.Position = UDim2.new(0.0423633605, 0, 0.34596166, 0)
-PsychicL.Size = UDim2.new(0.914631486, 0, 0.113408819, 0)
-PsychicL.Selected = true
-PsychicL.Font = Enum.Font.Cartoon
-PsychicL.Text = "Psychic"
-PsychicL.TextColor3 = Color3.new(1, 0, 0)
-PsychicL.TextScaled = true
-PsychicL.TextSize = 14
-PsychicL.TextStrokeTransparency = 0
-PsychicL.TextWrapped = true
-
-QuestionL.Name = "QuestionL"
-QuestionL.Parent = LocationFrame
-QuestionL.BackgroundColor3 = Color3.new(0, 0, 0)
-QuestionL.BackgroundTransparency = 0.5
-QuestionL.BorderColor3 = Color3.new(1, 0, 0)
-QuestionL.BorderSizePixel = 3
-QuestionL.Position = UDim2.new(0.0423633605, 0, 0.485972017, 0)
-QuestionL.Size = UDim2.new(0.914631486, 0, 0.113408819, 0)
-QuestionL.Selected = true
-QuestionL.Font = Enum.Font.Cartoon
-QuestionL.Text = "Others"
-QuestionL.TextColor3 = Color3.new(1, 0, 0)
-QuestionL.TextScaled = true
-QuestionL.TextSize = 14
-QuestionL.TextStrokeTransparency = 0
-QuestionL.TextWrapped = true
-
-CloseL.Name = "CloseL"
-CloseL.Parent = LocationFrame
-CloseL.BackgroundColor3 = Color3.new(0, 0, 0)
-CloseL.BackgroundTransparency = 0.5
-CloseL.BorderColor3 = Color3.new(1, 0, 0)
-CloseL.BorderSizePixel = 3
-CloseL.Position = UDim2.new(0.0423633605, 0, 0.835997939, 0)
-CloseL.Size = UDim2.new(0.914631486, 0, 0.113408819, 0)
-CloseL.Selected = true
-CloseL.Font = Enum.Font.Cartoon
-CloseL.Text = "Close"
-CloseL.TextColor3 = Color3.new(1, 0, 0)
-CloseL.TextScaled = true
-CloseL.TextSize = 14
-CloseL.TextStrokeTransparency = 0
-CloseL.TextWrapped = true
-
--- Scripts:
-Body1.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(365,249,-435)
+-- Anti Idle --
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+	VirtualUser:CaptureController()
+	VirtualUser:ClickButton2(Vector2.new())
 end)
-Body2.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(354,263,-480)
-end)
-Body3.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603,269,2248)
-end)
-Body4.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2300,979,1065)
-end)
-Body5.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1980,745,-1861)
-end)
-Body6.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-244,290,961)
-end)
-Fist1.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(403,271,973)
-end)
-Fist2.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2275,1966,1057)
-end)
-Fist3.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1177,4788,-2291)
-end)
-Fist4.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1378,9274,1650)
-end)
-Fist5.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-369,15735,-9)
-end)
-Psychic1.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2624,5548,-517)
-end)
-Other1.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(486,249,898)
-end)
-Other2.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,100000,0)
-end)
-FistL.MouseButton1Click:Connect(function()
-	if Selected2.Value == "None" then
-		else
-	SPTSGui[Selected2.Value].Visible = false
+
+showstartmessage = true
+farmbtsafetyactive = false
+farmbtsafety2active = false
+settplocation = false
+playerdied = false
+deathreturnactive = false
+resetplayerstat = false
+killplayeractive = false
+farmallactive = false
+farmfistactive = false
+farmbodyactive = false
+farmspeedactive = false
+farmjumpactive = false
+farmpsychicactive = false
+punchmodeactive = false
+ESPEnabled = false
+ESPLength = 200000
+
+CharAddedEvent = { }
+
+Plrs.PlayerAdded:connect(function(plr)
+	if CharAddedEvent[plr.Name] == nil then
+		CharAddedEvent[plr.Name] = plr.CharacterAdded:connect(function(char)
+			if ESPEnabled then
+				RemoveESP(plr)
+				CreateESP(plr)
+			end
+		end)
 	end
-	FLocation.Visible = true
-Selected2.Value = "FLocation"
 end)
-PsychicL.MouseButton1Click:Connect(function()
-	if Selected2.Value == "None" then
-		else
-	SPTSGui[Selected2.Value].Visible = false
+
+Plrs.PlayerRemoving:connect(function(plr)
+	if CharAddedEvent[plr.Name] ~= nil then
+		CharAddedEvent[plr.Name]:Disconnect()
+		CharAddedEvent[plr.Name] = nil
 	end
-	PLocation.Visible = true
-Selected2.Value = "PLocation"
+	RemoveESP(plr)
 end)
-BodyL.MouseButton1Click:Connect(function()
-	if Selected2.Value == "None" then
-		else
-	SPTSGui[Selected2.Value].Visible = false
+
+function CreateESP(plr)
+	if plr ~= nil then
+		local GetChar = plr.Character
+		if not GetChar then return end
+		local GetHead do
+			repeat wait() until GetChar:FindFirstChild("Head")
+		end
+		GetHead = GetChar.Head
+		
+		local bb = Instance.new("BillboardGui", CoreGui)
+		bb.Adornee = GetHead
+		bb.ExtentsOffset = Vector3.new(0, 1, 0)
+		bb.AlwaysOnTop = true
+		bb.Size = UDim2.new(0, 5, 0, 5)
+		bb.StudsOffset = Vector3.new(0, 3, 0)
+		bb.Name = "ESP_" .. plr.Name
+		
+		local frame = Instance.new("Frame", bb)
+		frame.ZIndex = 10
+		frame.BackgroundTransparency = 1
+		frame.Size = UDim2.new(1, 0, 1, 0)
+		
+		local TxtName = Instance.new("TextLabel", frame)
+		TxtName.Name = "Names"
+		TxtName.ZIndex = 10
+		TxtName.Text = plr.Name
+		TxtName.BackgroundTransparency = 1
+		TxtName.Position = UDim2.new(0, 0, 0, -45)
+		TxtName.Size = UDim2.new(1, 0, 10, 0)
+		TxtName.Font = "SourceSansBold"
+		TxtName.TextColor3 = Color3.new(0, 0, 0)
+		TxtName.TextSize = 14
+		TxtName.TextStrokeTransparency = 0.5
+		
+		local TxtDist = Instance.new("TextLabel", frame)
+		TxtDist.Name = "Dist"
+		TxtDist.ZIndex = 10
+		TxtDist.Text = ""
+		TxtDist.BackgroundTransparency = 1
+		TxtDist.Position = UDim2.new(0, 0, 0, -35)
+		TxtDist.Size = UDim2.new(1, 0, 10, 0)
+		TxtDist.Font = "SourceSansBold"
+		TxtDist.TextColor3 = Color3.new(0, 0, 0)
+		TxtDist.TextSize = 15
+		TxtDist.TextStrokeTransparency = 0.5
+
+		local TxtHealth = Instance.new("TextLabel", frame)
+		TxtHealth.Name = "Health"
+		TxtHealth.ZIndex = 10
+		TxtHealth.Text = ""
+		TxtHealth.BackgroundTransparency = 1
+		TxtHealth.Position = UDim2.new(0, 0, 0, -25)
+		TxtHealth.Size = UDim2.new(1, 0, 10, 0)
+		TxtHealth.Font = "SourceSansBold"
+		TxtHealth.TextColor3 = Color3.new(0, 0, 0)
+		TxtHealth.TextSize = 15
+		TxtHealth.TextStrokeTransparency = 0.5
+
+		local TxtFist = Instance.new("TextLabel", frame)
+		TxtFist.Name = "Fist"
+		TxtFist.ZIndex = 10
+		TxtFist.Text = ""
+		TxtFist.BackgroundTransparency = 1
+		TxtFist.Position = UDim2.new(0, 0, 0, -15)
+		TxtFist.Size = UDim2.new(1, 0, 10, 0)
+		TxtFist.Font = "SourceSansBold"
+		TxtFist.TextColor3 = Color3.new(0, 0, 0)
+		TxtFist.TextSize = 15
+		TxtFist.TextStrokeTransparency = 0.5
+
+		local TxtPsychic = Instance.new("TextLabel", frame)
+		TxtPsychic.Name = "Psychic"
+		TxtPsychic.ZIndex = 10
+		TxtPsychic.Text = ""
+		TxtPsychic.BackgroundTransparency = 1
+		TxtPsychic.Position = UDim2.new(0, 0, 0, -5)
+		TxtPsychic.Size = UDim2.new(1, 0, 10, 0)
+		TxtPsychic.Font = "SourceSansBold"
+		TxtPsychic.TextColor3 = Color3.new(0, 0, 0)
+		TxtPsychic.TextSize = 15
+		TxtPsychic.TextStrokeTransparency = 0.5
 	end
-	BLocation.Visible = true
-Selected2.Value = "BLocation"
-end)
-QuestionL.MouseButton1Click:Connect(function()
-	if Selected2.Value == "None" then
-		else
-	SPTSGui[Selected2.Value].Visible = false
+end
+
+function UpdateESP(plr)
+	local Find = CoreGui:FindFirstChild("ESP_" .. plr.Name)
+	if Find then
+		local plrStatus = game.Players[plr.Name].leaderstats.Status
+		
+		
+		local GetChar = plr.Character
+		if MyChar and GetChar then
+			local Find2 = MyChar:FindFirstChild("HumanoidRootPart")
+			local Find3 = GetChar:FindFirstChild("HumanoidRootPart")
+			local Find4 = GetChar:FindFirstChildOfClass("Humanoid")
+			if Find2 and Find3 then
+				local pos = Find3.Position
+				local Dist = (Find2.Position - pos).magnitude
+				if Dist > ESPLength then
+					Find.Frame.Names.Visible = false
+					return
+				else
+					Find.Frame.Names.Visible = true
+				end
+				Find.Frame.Dist.Text = "Distance: " .. string.format("%.0f", Dist)
+				--Find.Frame.Pos.Text = "(X: " .. string.format("%.0f", pos.X) .. ", Y: " .. string.format("%.0f", pos.Y) .. ", Z: " .. string.format("%.0f", pos.Z) .. ")"
+				if Find4 then
+					Find.Frame.Health.Text = "Health: " ..converttoletter(string.format("%.0f", Find4.Health))
+					Find.Frame.Fist.Text = "Fist: " ..converttoletter(string.format("%.0f", game.Players[plr.Name].PrivateStats.FistStrength.Value))
+					Find.Frame.Psychic.Text = "Psychic: " ..converttoletter(string.format("%.0f", game.Players[plr.Name].PrivateStats.PsychicPower.Value))
+				else
+					Find.Frame.Health.Text = ""
+					Find.Frame.Fist.Text = ""
+					Find.Frame.Psychic.Text = ""
+				end
+			end
+		end
 	end
-	QLOCATION.Visible = true
-Selected2.Value = "QLOCATION"
-end)
-CloseL.MouseButton1Click:Connect(function()
-	if Selected2.Value == "None" then
-		else
-	SPTSGui[Selected2.Value].Visible = false
+end
+
+function RemoveESP(plr)
+	local ESP = CoreGui:FindFirstChild("ESP_" .. plr.Name)
+	if ESP then
+		ESP:Destroy()
 	end
-Selected2.Value = "None"
+end
+
+local MainGUI = Instance.new("ScreenGui")
+local TopFrame = Instance.new("Frame")
+local MainFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local cf = Instance.new("Frame")
+local c1 = Instance.new("TextLabel")
+local c = Instance.new("TextButton")
+local DeathReturn = Instance.new("TextButton")
+local PunchMode = Instance.new("TextButton")
+local WayPoints = Instance.new("TextButton")
+local WayPointsFrame = Instance.new("Frame")
+local FarmExp = Instance.new("TextButton")
+local FarmExpFrame = Instance.new("Frame")
+local ShowLocation = Instance.new("TextLabel")
+local SetLocation = Instance.new("TextButton")
+local TPLocation = Instance.new("TextButton")
+local Location1 = Instance.new("TextButton")
+local Location2 = Instance.new("TextButton")
+local LocationFS1B = Instance.new("TextButton")
+local LocationFS100B = Instance.new("TextButton")
+local LocationFS10T = Instance.new("TextButton")
+local Location3 = Instance.new("TextButton")
+local Location4 = Instance.new("TextButton")
+local Location5 = Instance.new("TextButton")
+local Location6 = Instance.new("TextButton")
+local Location7 = Instance.new("TextButton")
+local Location8 = Instance.new("TextButton")
+local Location9 = Instance.new("TextButton")
+local Location10 = Instance.new("TextButton")
+local LocationBT1B = Instance.new("TextButton")
+local LocationBT100B = Instance.new("TextButton")
+local LocationBT10T = Instance.new("TextButton")
+local LocationPP1M = Instance.new("TextButton")
+local LocationPP1B = Instance.new("TextButton")
+local LocationPP1T = Instance.new("TextButton")
+local LocationPP1Qa = Instance.new("TextButton")
+local LocationBody1B = Instance.new("TextButton")
+local FarmAll = Instance.new("TextButton")
+local FarmFist = Instance.new("TextButton")
+local FarmBody = Instance.new("TextButton")
+local FarmSpeed = Instance.new("TextButton")
+local FarmJump = Instance.new("TextButton")
+local SavePosition = Instance.new("TextLabel")
+local FarmPsychic = Instance.new("TextButton")
+local FarmBodyLabel = Instance.new("TextLabel")
+local FarmSpeedLabel = Instance.new("TextLabel")
+local esptrack = Instance.new("TextButton")
+local ESPLength = Instance.new("TextBox")
+local Extras = Instance.new("TextButton")
+local ExtrasFrame = Instance.new("Frame")
+local ShowBetterFS = Instance.new("TextButton")
+local ShowBetterBT = Instance.new("TextButton")
+local ShowBetterPP = Instance.new("TextButton")
+local ShowWorseFS = Instance.new("TextButton")
+local ShowWorseBT = Instance.new("TextButton")
+local ShowWorsePP = Instance.new("TextButton")
+local PlayerInfoStatsText1 = Instance.new("TextLabel")
+local ShowStatsFist1 = Instance.new("TextLabel")
+local ShowStatsBody1 = Instance.new("TextLabel")
+local ShowStatsSpeed1 = Instance.new("TextLabel")
+local ShowStatsJump1 = Instance.new("TextLabel")
+local ShowStatsPsychic1 = Instance.new("TextLabel")
+local ShowStatsFist2 = Instance.new("TextLabel")
+local ShowStatsBody2 = Instance.new("TextLabel")
+local ShowStatsSpeed2 = Instance.new("TextLabel")
+local ShowStatsJump2 = Instance.new("TextLabel")
+local ShowStatsPsychic2 = Instance.new("TextLabel")
+local AnnoyNameLabel = Instance.new("TextLabel")
+local AnnoyName = Instance.new("TextBox")
+local AnnoyStart = Instance.new("TextButton")
+local KillPlayerStart = Instance.new("TextButton")
+local TptoPlayer = Instance.new("TextButton")
+local PanicToggleLabel = Instance.new("TextLabel")
+local farmbtsafety = Instance.new("TextButton")
+local farmbtsafetyText1 = Instance.new("TextLabel")
+local farmbtsafetylevel = Instance.new("TextBox")
+local farmbtsafety2 = Instance.new("TextButton")
+local farmbtsafetylabel = Instance.new("TextLabel")
+local PanicToggle = Instance.new("TextBox")
+local ReJoinServer = Instance.new("TextButton")
+local InfoScreen = Instance.new("TextButton")
+local InfoFrame = Instance.new("Frame")
+local InfoText1 = Instance.new("TextLabel")
+local PlayerName = Instance.new("TextBox")
+local StatNameSet = Instance.new("TextButton")
+
+-- Properties
+
+MainGUI.Name = "MainGUI"
+MainGUI.Parent = game.CoreGui
+MainGUI.ResetOnSpawn = false
+local MainCORE = game.CoreGui["MainGUI"]
+
+TopFrame.Name = "TopFrame"
+TopFrame.Parent = MainGUI
+TopFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+TopFrame.BorderColor3 = Color3.new(1, 0, 0)
+TopFrame.BackgroundTransparency = 1
+TopFrame.Position = UDim2.new(0.5, -30, 0, -27)
+TopFrame.Size = UDim2.new(0, 80, 0, 20)
+TopFrame.Visible = false
+
+cf.Name = "cf"
+cf.Parent = MainGUI
+cf.BackgroundColor3 = Color3.new(0, 0, 0)
+cf.BorderColor3 = Color3.new(1, 0, 0)
+cf.BackgroundTransparency = 0
+cf.Position = UDim2.new(0.5, -195, 0.5, -110)
+cf.Size = UDim2.new(0, 390, 0, 220)
+cf.Visible = true
+
+c1.Name = "c1"
+c1.Parent = cf
+c1.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+c1.BorderColor3 = Color3.new(1, 0, 0)
+c1.BackgroundTransparency = 1
+c1.Position = UDim2.new(0, 10, 0, 13)
+c1.Size = UDim2.new(0, 370, 0, 160)
+c1.Font = Enum.Font.Cartoon
+c1.TextColor3 = Color3.new(1, 1, 1)
+c1.Text = "SUPER POWER TRAINING SIMULATOR"
+c1.TextSize = 17
+
+c.Name = "c"
+c.Parent = cf
+c.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+c.BorderColor3 = Color3.new(1, 0, 0)
+c.Position = UDim2.new(0.5, -30, 0, 190)
+c.Size = UDim2.new(0, 60, 0, 20)
+c.Font = Enum.Font.Cartoon
+c.Text = "CLOSE"
+c.TextColor3 = Color3.new(1, 0, 0)
+c.TextSize = 17
+c.TextWrapped = true
+
+Open.Name = "Open"
+Open.Parent = TopFrame
+Open.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+Open.BorderColor3 = Color3.new(1, 0, 0)
+Open.Size = UDim2.new(0, 60, 0, 20)
+Open.Font = Enum.Font.Cartoon
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(1, 1, 1)
+Open.TextSize = 18
+Open.Selectable = true
+Open.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = MainGUI
+MainFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+MainFrame.BackgroundTransparency = 0.5
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, -382.5, 0, -32)
+MainFrame.Size = UDim2.new(0, 765, 0, 30)
+if not cf.Visible then MainGUI:Destroy() else MainFrame.Visible = true end
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+Close.BorderColor3 = Color3.new(1, 0, 0)
+Close.Position = UDim2.new(0, 10, 0, 5)
+Close.Size = UDim2.new(0, 20, 0, 20)
+Close.Font = Enum.Font.Cartoon
+Close.Text = "X"
+Close.TextColor3 = Color3.new(1, 0, 0)
+Close.TextSize = 17
+Close.TextScaled = true
+Close.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = MainFrame
+Minimize.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+Minimize.BorderColor3 = Color3.new(1, 0, 0)
+Minimize.Position = UDim2.new(0, 35, 0, 5)
+Minimize.Size = UDim2.new(0, 20, 0, 20)
+Minimize.Font = Enum.Font.Cartoon
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.new(1, 0, 0)
+Minimize.TextSize = 17
+Minimize.TextScaled = true
+Minimize.TextWrapped = true
+
+WayPoints.Name = "WayPoints"
+WayPoints.Parent = MainFrame
+WayPoints.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+WayPoints.BorderColor3 = Color3.new(1, 0, 0)
+WayPoints.Position = UDim2.new(0, 150, 0, 5)
+WayPoints.Size = UDim2.new(0, 65, 0, 20)
+WayPoints.Font = Enum.Font.Cartoon
+WayPoints.TextColor3 = Color3.new(1, 1, 1)
+WayPoints.Text = "Teleport"
+WayPoints.TextSize = 17
+WayPoints.TextWrapped = true
+
+WayPointsFrame.Name = "WayPointsFrame"
+WayPointsFrame.Parent = MainFrame
+WayPointsFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+WayPointsFrame.BorderColor3 = Color3.new(1, 0, 0)
+WayPointsFrame.BackgroundTransparency = 0.2
+WayPointsFrame.Position = UDim2.new(0, 1, 0, 33)
+WayPointsFrame.Size = UDim2.new(0, 375, 0, 480)
+WayPointsFrame.Visible = false
+
+FarmExp.Name = "FarmExp"
+FarmExp.Parent = MainFrame
+FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmExp.BorderColor3 = Color3.new(1, 0, 0)
+FarmExp.Position = UDim2.new(0, 220, 0, 5)
+FarmExp.Size = UDim2.new(0, 75, 0, 20)
+FarmExp.Font = Enum.Font.Cartoon
+FarmExp.TextColor3 = Color3.new(1, 1, 1)
+FarmExp.Text = "Farm Exp"
+FarmExp.TextSize = 17
+FarmExp.TextWrapped = true
+
+FarmExpFrame.Name = "FarmExpFrame"
+FarmExpFrame.Parent = MainFrame
+FarmExpFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmExpFrame.BorderColor3 = Color3.new(1, 0, 0)
+FarmExpFrame.BackgroundTransparency = 0.2
+FarmExpFrame.Position = UDim2.new(0, 62.5, 0, 33)
+FarmExpFrame.Size = UDim2.new(0, 210, 0, 165)
+FarmExpFrame.Visible = false
+
+ShowLocation.Name = "ShowLocation"
+ShowLocation.Parent = WayPointsFrame
+ShowLocation.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+ShowLocation.TextColor3 = Color3.new(1, 1, 1)
+ShowLocation.BorderColor3 = Color3.new(1, 0, 0)
+ShowLocation.Position = UDim2.new(0, 5, 0, 5)
+ShowLocation.Size = UDim2.new(0, 170, 0, 20)
+ShowLocation.Font = Enum.Font.Cartoon
+ShowLocation.Text = "Current Location"
+ShowLocation.TextWrapped = true
+ShowLocation.TextSize = 15
+
+SetLocation.Name = "SetLocation"
+SetLocation.Parent = WayPointsFrame
+SetLocation.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+SetLocation.TextColor3 = Color3.new(1, 1, 1)
+SetLocation.BorderColor3 = Color3.new(1, 0, 0)
+SetLocation.Position = UDim2.new(0, 180, 0, 5)
+SetLocation.Size = UDim2.new(0, 120, 0, 20)
+SetLocation.Font = Enum.Font.Cartoon
+SetLocation.Text = "Set Location"
+SetLocation.TextWrapped = true
+SetLocation.TextSize = 16
+
+TPLocation.Name = "TPLocation"
+TPLocation.Parent = WayPointsFrame
+TPLocation.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+TPLocation.TextColor3 = Color3.new(1, 1, 1)
+TPLocation.BorderColor3 = Color3.new(1, 0, 0)
+TPLocation.Position = UDim2.new(0, 305, 0, 5)
+TPLocation.Size = UDim2.new(0, 65, 0, 20)
+TPLocation.Font = Enum.Font.Cartoon
+TPLocation.Text = "Tp to"
+TPLocation.TextWrapped = true
+TPLocation.TextSize = 16
+
+Location1.Name = "Location1"
+Location1.Parent = WayPointsFrame
+Location1.BackgroundColor3 = Color3.new(255/255, 94/255, 40/255)
+Location1.TextColor3 = Color3.new(1, 1, 1)
+Location1.BorderColor3 = Color3.new(1, 0, 0)
+Location1.Position = UDim2.new(0, 5, 0, 30)
+Location1.Size = UDim2.new(0, 365, 0, 20)
+Location1.Font = Enum.Font.Cartoon
+Location1.Text = "Teleport to Safe Zone"
+Location1.TextWrapped = true
+Location1.TextSize = 16
+
+Location2.Name = "Location2"
+Location2.Parent = WayPointsFrame
+Location2.BackgroundColor3 = Color3.new(70/255, 105/255, 0)
+Location2.TextColor3 = Color3.new(1, 1, 1)
+Location2.BorderColor3 = Color3.new(1, 0, 0)
+Location2.Position = UDim2.new(0, 5, 0, 55)
+Location2.Size = UDim2.new(0, 365, 0, 20)
+Location2.Font = Enum.Font.Cartoon
+Location2.Text = "Teleport to Rock [10x Fist Strength]"
+Location2.TextWrapped = true
+Location2.TextSize = 16
+
+Location7.Name = "Location7"
+Location7.Parent = WayPointsFrame
+Location7.BackgroundColor3 = Color3.new(70/255, 105/255, 0)
+Location7.TextColor3 = Color3.new(1, 1, 1)
+Location7.BorderColor3 = Color3.new(1, 0, 0)
+Location7.Position = UDim2.new(0, 5, 0, 80)
+Location7.Size = UDim2.new(0, 365, 0, 20)
+Location7.Font = Enum.Font.Cartoon
+Location7.Text = "Teleport to Crystal [100x Fist Strength]"
+Location7.TextWrapped = true
+Location7.TextSize = 16
+
+LocationFS1B.Name = "LocationFS1B"
+LocationFS1B.Parent = WayPointsFrame
+LocationFS1B.BackgroundColor3 = Color3.new(70/255, 105/255, 0)
+LocationFS1B.TextColor3 = Color3.new(1, 1, 1)
+LocationFS1B.BorderColor3 = Color3.new(1, 0, 0)
+LocationFS1B.Position = UDim2.new(0, 5, 0, 105)
+LocationFS1B.Size = UDim2.new(0, 365, 0, 20)
+LocationFS1B.Font = Enum.Font.Cartoon
+LocationFS1B.Text = "Teleport to Blue Star [2k x FS]: 1B+ FS"
+LocationFS1B.TextWrapped = true
+LocationFS1B.TextSize = 16
+
+LocationFS100B.Name = "LocationFS100B"
+LocationFS100B.Parent = WayPointsFrame
+LocationFS100B.BackgroundColor3 = Color3.new(70/255, 105/255, 0)
+LocationFS100B.TextColor3 = Color3.new(1, 1, 1)
+LocationFS100B.BorderColor3 = Color3.new(1, 0, 0)
+LocationFS100B.Position = UDim2.new(0, 5, 0, 130)
+LocationFS100B.Size = UDim2.new(0, 365, 0, 20)
+LocationFS100B.Font = Enum.Font.Cartoon
+LocationFS100B.Text = "Teleport to Green Star [40k x FS]: 100B+ FS"
+LocationFS100B.TextWrapped = true
+LocationFS100B.TextSize = 16
+
+LocationFS10T.Name = "LocationFS10T"
+LocationFS10T.Parent = WayPointsFrame
+LocationFS10T.BackgroundColor3 = Color3.new(70/255, 105/255, 0)
+LocationFS10T.TextColor3 = Color3.new(1, 1, 1)
+LocationFS10T.BorderColor3 = Color3.new(1, 0, 0)
+LocationFS10T.Position = UDim2.new(0, 5, 0, 155)
+LocationFS10T.Size = UDim2.new(0, 365, 0, 20)
+LocationFS10T.Font = Enum.Font.Cartoon
+LocationFS10T.Text = "Teleport to Orange Star [800k x FS]: 10T+ FS"
+LocationFS10T.TextWrapped = true
+LocationFS10T.TextSize = 16
+
+Location3.Name = "Location3"
+Location3.Parent = WayPointsFrame
+Location3.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+Location3.TextColor3 = Color3.new(1, 1, 1)
+Location3.BorderColor3 = Color3.new(1, 0, 0)
+Location3.Position = UDim2.new(0, 5, 0, 180)
+Location3.Size = UDim2.new(0, 365, 0, 20)
+Location3.Font = Enum.Font.Cartoon
+Location3.Text = "Teleport to City Port Training 1 [5x BT]: 100+ BT"
+Location3.TextWrapped = true
+Location3.TextSize = 16
+
+Location4.Name = "Location4"
+Location4.Parent = WayPointsFrame
+Location4.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+Location4.TextColor3 = Color3.new(1, 1, 1)
+Location4.BorderColor3 = Color3.new(1, 0, 0)
+Location4.Position = UDim2.new(0, 5, 0, 205)
+Location4.Size = UDim2.new(0, 365, 0, 20)
+Location4.Font = Enum.Font.Cartoon
+Location4.Text = "Teleport to City Port Training 2 [10x BT]: 10k+ BT"
+Location4.TextWrapped = true
+Location4.TextSize = 16
+
+Location5.Name = "Location5"
+Location5.Parent = WayPointsFrame
+Location5.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+Location5.TextColor3 = Color3.new(1, 1, 1)
+Location5.BorderColor3 = Color3.new(1, 0, 0)
+Location5.Position = UDim2.new(0, 5, 0, 230)
+Location5.Size = UDim2.new(0, 365, 0, 20)
+Location5.Font = Enum.Font.Cartoon
+Location5.Text = "Teleport to Ice Mountain [20x BT]: 100k+ BT"
+Location5.TextWrapped = true
+Location5.TextSize = 16
+
+Location6.Name = "Location6"
+Location6.Parent = WayPointsFrame
+Location6.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+Location6.TextColor3 = Color3.new(1, 1, 1)
+Location6.BorderColor3 = Color3.new(1, 0, 0)
+Location6.Position = UDim2.new(0, 5, 0, 255)
+Location6.Size = UDim2.new(0, 365, 0, 20)
+Location6.Font = Enum.Font.Cartoon
+Location6.Text = "Teleport to Tornado [50x BT]: 1M+ BT"
+Location6.TextWrapped = true
+Location6.TextSize = 16
+
+Location8.Name = "Location8"
+Location8.Parent = WayPointsFrame
+Location8.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+Location8.TextColor3 = Color3.new(1, 1, 1)
+Location8.BorderColor3 = Color3.new(1, 0, 0)
+Location8.Position = UDim2.new(0, 5, 0, 280)
+Location8.Size = UDim2.new(0, 365, 0, 20)
+Location8.Font = Enum.Font.Cartoon
+Location8.Text = "Teleport to Volcano [100x BT]: 10M+ BT"
+Location8.TextWrapped = true
+Location8.TextSize = 16
+
+LocationBT1B.Name = "LocationBT1B"
+LocationBT1B.Parent = WayPointsFrame
+LocationBT1B.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+LocationBT1B.TextColor3 = Color3.new(1, 1, 1)
+LocationBT1B.BorderColor3 = Color3.new(1, 0, 0)
+LocationBT1B.Position = UDim2.new(0, 5, 0, 305)
+LocationBT1B.Size = UDim2.new(0, 365, 0, 20)
+LocationBT1B.Font = Enum.Font.Cartoon
+LocationBT1B.Text = "Teleport to [2k x BT] Area: 1B+ BT"
+LocationBT1B.TextWrapped = true
+LocationBT1B.TextSize = 16
+
+LocationBT100B.Name = "LocationBT100B"
+LocationBT100B.Parent = WayPointsFrame
+LocationBT100B.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+LocationBT100B.TextColor3 = Color3.new(1, 1, 1)
+LocationBT100B.BorderColor3 = Color3.new(1, 0, 0)
+LocationBT100B.Position = UDim2.new(0, 5, 0, 330)
+LocationBT100B.Size = UDim2.new(0, 365, 0, 20)
+LocationBT100B.Font = Enum.Font.Cartoon
+LocationBT100B.Text = "Teleport to [40k x BT] Area: 100B+ BT"
+LocationBT100B.TextWrapped = true
+LocationBT100B.TextSize = 16
+
+LocationBT10T.Name = "LocationBT10T"
+LocationBT10T.Parent = WayPointsFrame
+LocationBT10T.BackgroundColor3 = Color3.new(66/255, 0, 165/255)
+LocationBT10T.TextColor3 = Color3.new(1, 1, 1)
+LocationBT10T.BorderColor3 = Color3.new(1, 0, 0)
+LocationBT10T.Position = UDim2.new(0, 5, 0, 355)
+LocationBT10T.Size = UDim2.new(0, 365, 0, 20)
+LocationBT10T.Font = Enum.Font.Cartoon
+LocationBT10T.Text = "Teleport to [800k x BT] Area: 10T+ BT"
+LocationBT10T.TextWrapped = true
+LocationBT10T.TextSize = 16
+
+LocationPP1M.Name = "LocationPP1M"
+LocationPP1M.Parent = WayPointsFrame
+LocationPP1M.BackgroundColor3 = Color3.new(195/255, 0, 39/255)
+LocationPP1M.TextColor3 = Color3.new(1, 1, 1)
+LocationPP1M.BorderColor3 = Color3.new(1, 0, 0)
+LocationPP1M.Position = UDim2.new(0, 5, 0, 380)
+LocationPP1M.Size = UDim2.new(0, 365, 0, 20)
+LocationPP1M.Font = Enum.Font.Cartoon
+LocationPP1M.Text = "Teleport to Psychic Island [100x PP]: 1M+ PP"
+LocationPP1M.TextWrapped = true
+LocationPP1M.TextSize = 16
+
+LocationPP1B.Name = "LocationPP1B"
+LocationPP1B.Parent = WayPointsFrame
+LocationPP1B.BackgroundColor3 = Color3.new(195/255, 0, 39/255)
+LocationPP1B.TextColor3 = Color3.new(1, 1, 1)
+LocationPP1B.BorderColor3 = Color3.new(1, 0, 0)
+LocationPP1B.Position = UDim2.new(0, 5, 0, 405)
+LocationPP1B.Size = UDim2.new(0, 365, 0, 20)
+LocationPP1B.Font = Enum.Font.Cartoon
+LocationPP1B.Text = "Teleport to Psychic Island [10k x PP]: 1B+ PP"
+LocationPP1B.TextWrapped = true
+LocationPP1B.TextSize = 16
+
+LocationPP1T.Name = "LocationPP1T"
+LocationPP1T.Parent = WayPointsFrame
+LocationPP1T.BackgroundColor3 = Color3.new(195/255, 0, 39/255)
+LocationPP1T.TextColor3 = Color3.new(1, 1, 1)
+LocationPP1T.BorderColor3 = Color3.new(1, 0, 0)
+LocationPP1T.Position = UDim2.new(0, 5, 0, 430)
+LocationPP1T.Size = UDim2.new(0, 365, 0, 20)
+LocationPP1T.Font = Enum.Font.Cartoon
+LocationPP1T.Text = "Teleport to Psychic Island [1M x PP]: 1T+ PP"
+LocationPP1T.TextWrapped = true
+LocationPP1T.TextSize = 16
+
+LocationPP1Qa.Name = "LocationPP1Qa"
+LocationPP1Qa.Parent = WayPointsFrame
+LocationPP1Qa.BackgroundColor3 = Color3.new(195/255, 0, 39/255)
+LocationPP1Qa.TextColor3 = Color3.new(1, 1, 1)
+LocationPP1Qa.BorderColor3 = Color3.new(1, 0, 0)
+LocationPP1Qa.Position = UDim2.new(0, 5, 0, 455)
+LocationPP1Qa.Size = UDim2.new(0, 365, 0, 20)
+LocationPP1Qa.Font = Enum.Font.Cartoon
+LocationPP1Qa.Text = "Teleport to Psychic Island [100M x PP]: 1Qa+ PP"
+LocationPP1Qa.TextWrapped = true
+LocationPP1Qa.TextSize = 16
+
+FarmAll.Name = "FarmAll"
+FarmAll.Parent = FarmExpFrame
+FarmAll.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmAll.TextColor3 = Color3.new(1, 1, 1)
+FarmAll.BorderColor3 = Color3.new(1, 0, 0)
+FarmAll.Position = UDim2.new(0, 5, 0, 5)
+FarmAll.Size = UDim2.new(0, 200, 0, 20)
+FarmAll.Font = Enum.Font.Cartoon
+FarmAll.Text = "Farm All: OFF"
+FarmAll.TextWrapped = true
+FarmAll.TextSize = 16
+
+FarmFist.Name = "FarmFist"
+FarmFist.Parent = FarmExpFrame
+FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmFist.TextColor3 = Color3.new(1, 1, 1)
+FarmFist.BorderColor3 = Color3.new(1, 0, 0)
+FarmFist.Position = UDim2.new(0, 5, 0, 40)
+FarmFist.Size = UDim2.new(0, 200, 0, 20)
+FarmFist.Font = Enum.Font.Cartoon
+FarmFist.Text = "Farm Fist Strength: OFF"
+FarmFist.TextWrapped = true
+FarmFist.TextSize = 16
+
+FarmBody.Name = "FarmBody"
+FarmBody.Parent = FarmExpFrame
+FarmBody.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmBody.TextColor3 = Color3.new(1, 1, 1)
+FarmBody.BorderColor3 = Color3.new(1, 0, 0)
+FarmBody.Position = UDim2.new(0, 5, 0, 65)
+FarmBody.Size = UDim2.new(0, 200, 0, 20)
+FarmBody.Font = Enum.Font.Cartoon
+FarmBody.Text = "Farm Body Toughness: OFF"
+FarmBody.TextWrapped = true
+FarmBody.TextSize = 16
+
+FarmSpeed.Name = "FarmSpeed"
+FarmSpeed.Parent = FarmExpFrame
+FarmSpeed.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmSpeed.TextColor3 = Color3.new(1, 1, 1)
+FarmSpeed.BorderColor3 = Color3.new(1, 0, 0)
+FarmSpeed.Position = UDim2.new(0, 5, 0, 90)
+FarmSpeed.Size = UDim2.new(0, 200, 0, 20)
+FarmSpeed.Font = Enum.Font.Cartoon
+FarmSpeed.Text = "Farm Movement Speed: OFF"
+FarmSpeed.TextWrapped = true
+FarmSpeed.TextSize = 16
+
+FarmJump.Name = "FarmJump"
+FarmJump.Parent = FarmExpFrame
+FarmJump.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmJump.TextColor3 = Color3.new(1, 1, 1)
+FarmJump.BorderColor3 = Color3.new(1, 0, 0)
+FarmJump.Position = UDim2.new(0, 5, 0, 115)
+FarmJump.Size = UDim2.new(0, 200, 0, 20)
+FarmJump.Font = Enum.Font.Cartoon
+FarmJump.Text = "Farm Jump Force: OFF"
+FarmJump.TextWrapped = true
+FarmJump.TextSize = 16
+
+FarmPsychic.Name = "FarmPsychic"
+FarmPsychic.Parent = FarmExpFrame
+FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmPsychic.TextColor3 = Color3.new(1, 1, 1)
+FarmPsychic.BorderColor3 = Color3.new(1, 0, 0)
+FarmPsychic.Position = UDim2.new(0, 5, 0, 140)
+FarmPsychic.Size = UDim2.new(0, 200, 0, 20)
+FarmPsychic.Font = Enum.Font.Cartoon
+FarmPsychic.Text = "Farm Psychic Power: OFF"
+FarmPsychic.TextWrapped = true
+FarmPsychic.TextSize = 16
+
+FarmBodyLabel.Name = "FarmBodyLabel"
+FarmBodyLabel.Parent = FarmExpFrame
+FarmBodyLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmBodyLabel.TextColor3 = Color3.new(1, 1, 1)
+FarmBodyLabel.BorderColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmBodyLabel.Position = UDim2.new(0, 213, 0, 65)
+FarmBodyLabel.Size = UDim2.new(0, 200, 0, 100)
+FarmBodyLabel.Font = Enum.Font.Cartoon
+FarmBodyLabel.Text = "Look at teleports and go to the best place you can go for your Body Toughness. You need 10Mil to go in the volcano but you need at least 50Mil before you can afk in there."
+FarmBodyLabel.TextSize = 16
+FarmBodyLabel.TextWrapped = true
+FarmBodyLabel.Visible = false
+
+FarmSpeedLabel.Name = "FarmSpeedLabel"
+FarmSpeedLabel.Parent = FarmExpFrame
+FarmSpeedLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmSpeedLabel.TextColor3 = Color3.new(1, 1, 1)
+FarmSpeedLabel.BorderColor3 = Color3.new(0.1, 0.1, 0.1)
+FarmSpeedLabel.Position = UDim2.new(0, 213, 0, 65)
+FarmSpeedLabel.Size = UDim2.new(0, 200, 0, 100)
+FarmSpeedLabel.Font = Enum.Font.Cartoon
+FarmSpeedLabel.Text = "Press 4 and equip the 100TON weight to get the maximum boost. If you still want to move around select the heaviest weight you can move around with but you wont get as much."
+FarmSpeedLabel.TextSize = 16
+FarmSpeedLabel.TextWrapped = true
+FarmSpeedLabel.Visible = false
+
+DeathReturn.Name = "DeathReturn"
+DeathReturn.Parent = MainFrame
+DeathReturn.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+DeathReturn.BorderColor3 = Color3.new(1, 0, 0)
+DeathReturn.Position = UDim2.new(0, 300, 0, 5)
+DeathReturn.Size = UDim2.new(0, 160, 0, 20)
+DeathReturn.Font = Enum.Font.Cartoon
+DeathReturn.TextColor3 = Color3.new(1, 1, 1)
+DeathReturn.Text = "Respawn Return: OFF"
+DeathReturn.TextSize = 17
+DeathReturn.TextWrapped = true
+
+esptrack.Name = "esptrack"
+esptrack.Parent = MainFrame
+esptrack.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+esptrack.BorderColor3 = Color3.new(1, 0, 0)
+esptrack.Position = UDim2.new(0, 465, 0, 5)
+esptrack.Size = UDim2.new(0, 35, 0, 20)
+esptrack.TextColor3 = Color3.new(1, 1, 1)
+esptrack.Font = Enum.Font.Cartoon
+esptrack.Text = "ESP"
+esptrack.TextSize = 16
+esptrack.TextWrapped = true
+
+Extras.Name = "Extras"
+Extras.Parent = MainFrame
+Extras.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+Extras.BorderColor3 = Color3.new(1, 0, 0)
+Extras.Position = UDim2.new(0, 505, 0, 5)
+Extras.Size = UDim2.new(0, 50, 0, 20)
+Extras.TextColor3 = Color3.new(1, 1, 1)
+Extras.Font = Enum.Font.Cartoon
+Extras.Text = "Extras"
+Extras.TextSize = 16
+Extras.TextWrapped = true
+
+ExtrasFrame.Name = "ExtrasFrame"
+ExtrasFrame.Parent = MainFrame
+ExtrasFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+ExtrasFrame.BorderColor3 = Color3.new(1, 0, 0)
+ExtrasFrame.BackgroundTransparency = 0.2
+ExtrasFrame.Position = UDim2.new(0, 435, 0, 33)
+ExtrasFrame.Size = UDim2.new(0, 160, 0, 213)
+ExtrasFrame.Visible = false
+
+AnnoyName.Name = "AnnoyName"
+AnnoyName.Parent = ExtrasFrame
+AnnoyName.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+AnnoyName.BorderColor3 = Color3.new(1, 0, 0)
+AnnoyName.Position = UDim2.new(0, 5, 0, 5)
+AnnoyName.Size = UDim2.new(0, 150, 0, 20)
+AnnoyName.TextColor3 = Color3.new(1, 1, 1)
+AnnoyName.Font = Enum.Font.Cartoon
+AnnoyName.Text = tostring(MyPlr.Name)
+AnnoyName.TextSize = 14
+AnnoyName.TextScaled = false
+AnnoyName.TextWrapped = true
+
+TptoPlayer.Name = "TptoPlayer"
+TptoPlayer.Parent = ExtrasFrame
+TptoPlayer.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+TptoPlayer.BorderColor3 = Color3.new(1, 0, 0)
+TptoPlayer.Position = UDim2.new(0, 5, 0, 26)
+TptoPlayer.Size = UDim2.new(0, 150, 0, 20)
+TptoPlayer.TextColor3 = Color3.new(1, 1, 1)
+TptoPlayer.Font = Enum.Font.Cartoon
+TptoPlayer.Text = "TP to Player"
+TptoPlayer.TextSize = 16
+TptoPlayer.TextWrapped = true
+
+AnnoyStart.Name = "AnnoyStart"
+AnnoyStart.Parent = ExtrasFrame
+AnnoyStart.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+AnnoyStart.BorderColor3 = Color3.new(1, 0, 0)
+AnnoyStart.Position = UDim2.new(0, 5, 0, 47)
+AnnoyStart.Size = UDim2.new(0, 150, 0, 20)
+AnnoyStart.TextColor3 = Color3.new(1, 1, 1)
+AnnoyStart.Font = Enum.Font.Cartoon
+AnnoyStart.Text = "TP Spam Player: OFF"
+AnnoyStart.TextSize = 16
+AnnoyStart.TextWrapped = true
+
+PanicToggleLabel.Name = "PanicToggleLabel"
+PanicToggleLabel.Parent = ExtrasFrame
+PanicToggleLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+PanicToggleLabel.BorderSizePixel = 0
+PanicToggleLabel.Position = UDim2.new(0, 5, 0, 77)
+PanicToggleLabel.Size = UDim2.new(0, 125, 0, 20)
+PanicToggleLabel.TextColor3 = Color3.new(1, 1, 1)
+PanicToggleLabel.Font = Enum.Font.Cartoon
+PanicToggleLabel.Text = "Panic KeyBind"
+PanicToggleLabel.TextSize = 16
+PanicToggleLabel.TextWrapped = true
+
+PanicToggle.Name = "PanicToggle"
+PanicToggle.Parent = ExtrasFrame
+PanicToggle.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+PanicToggle.BorderColor3 = Color3.new(0.8, 0.8, 0.8)
+PanicToggle.Position = UDim2.new(0, 130, 0, 78)
+PanicToggle.Size = UDim2.new(0, 25, 0, 18)
+PanicToggle.TextColor3 = Color3.new(1, 1, 1)
+PanicToggle.Font = Enum.Font.Cartoon
+PanicToggle.Text = "y"
+PanicToggle.TextSize = 16
+PanicToggle.TextWrapped = true
+
+farmbtsafetylabel.Name = "farmbtsafetylabel"
+farmbtsafetylabel.Parent = ExtrasFrame
+farmbtsafetylabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+farmbtsafetylabel.BorderSizePixel = 0
+farmbtsafetylabel.Position = UDim2.new(0, 5, 0, 137)
+farmbtsafetylabel.Size = UDim2.new(0, 120, 0, 20)
+farmbtsafetylabel.TextColor3 = Color3.new(1, 1, 1)
+farmbtsafetylabel.Font = Enum.Font.Cartoon
+farmbtsafetylabel.Text = "Health [percent]"
+farmbtsafetylabel.TextSize = 16
+farmbtsafetylabel.TextWrapped = true
+
+farmbtsafetylevel.Name = "farmbtsafetylevel"
+farmbtsafetylevel.Parent = ExtrasFrame
+farmbtsafetylevel.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+farmbtsafetylevel.BorderColor3 = Color3.new(0.8, 0.8, 0.8)
+farmbtsafetylevel.Position = UDim2.new(0, 125, 0, 138)
+farmbtsafetylevel.Size = UDim2.new(0, 30, 0, 19)
+farmbtsafetylevel.TextColor3 = Color3.new(1, 1, 1)
+farmbtsafetylevel.Font = Enum.Font.Cartoon
+farmbtsafetylevel.Text = "50"
+farmbtsafetylevel.TextSize = 16
+farmbtsafetylevel.TextWrapped = true
+
+farmbtsafety.Name = "farmbtsafety"
+farmbtsafety.Parent = ExtrasFrame
+farmbtsafety.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+farmbtsafety.BorderColor3 = Color3.new(1, 0, 0)
+farmbtsafety.Position = UDim2.new(0, 5, 0, 158)
+farmbtsafety.Size = UDim2.new(0, 150, 0, 20)
+farmbtsafety.Font = Enum.Font.Cartoon
+farmbtsafety.TextColor3 = Color3.new(1, 1, 1)
+farmbtsafety.Text = "Safety Net: OFF"
+farmbtsafety.TextSize = 16
+farmbtsafety.TextWrapped = true
+
+farmbtsafetyText1.Name = "farmbtsafetyText1"
+farmbtsafetyText1.Parent = ExtrasFrame
+farmbtsafetyText1.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+farmbtsafetyText1.TextColor3 = Color3.new(1, 1, 1)
+farmbtsafetyText1.BorderColor3 = Color3.new(0.1, 0.1, 0.1)
+farmbtsafetyText1.Position = UDim2.new(0, -155, 0, 141)
+farmbtsafetyText1.Size = UDim2.new(0, 150, 0, 115)
+farmbtsafetyText1.Font = Enum.Font.Cartoon
+farmbtsafetyText1.Text = "Enable this to tp you to the safe zone when your health goes below the preset figure. Only useful if you can take more than 1 hit from your attacker."
+farmbtsafetyText1.TextSize = 16
+farmbtsafetyText1.TextWrapped = true
+farmbtsafetyText1.Visible = false
+
+ReJoinServer.Name = "ReJoinServer"
+ReJoinServer.Parent = ExtrasFrame
+ReJoinServer.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+ReJoinServer.BorderColor3 = Color3.new(1, 0, 0)
+ReJoinServer.Position = UDim2.new(0, 5, 0, 188)
+ReJoinServer.Size = UDim2.new(0, 150, 0, 20)
+ReJoinServer.TextColor3 = Color3.new(1, 1, 1)
+ReJoinServer.Font = Enum.Font.Cartoon
+ReJoinServer.Text = "ReJoin Server"
+ReJoinServer.TextSize = 16
+ReJoinServer.TextWrapped = true
+
+InfoScreen.Name = "InfoScreen"
+InfoScreen.Parent = MainFrame
+InfoScreen.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+InfoScreen.BorderColor3 = Color3.new(1, 0, 0)
+InfoScreen.Position = UDim2.new(0, 560, 0, 5)
+InfoScreen.Size = UDim2.new(0, 40, 0, 20)
+InfoScreen.BackgroundTransparency = 0
+InfoScreen.Font = Enum.Font.Cartoon
+InfoScreen.TextColor3 = Color3.new(1, 1, 1)
+InfoScreen.Text = "Info"
+InfoScreen.TextSize = 17
+InfoScreen.TextWrapped = true
+
+InfoText1.Name = "InfoText1"
+InfoText1.Parent = MainFrame
+InfoText1.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+InfoText1.BorderColor3 = Color3.new(1, 0, 0)
+InfoText1.BackgroundTransparency = 0
+InfoText1.Position = UDim2.new(0, 405, 0, 32)
+InfoText1.Size = UDim2.new(0, 190, 0, 180)
+InfoText1.TextColor3 = Color3.new(1, 1, 1)
+InfoText1.Font = Enum.Font.Cartoon
+InfoText1.Text = "\nFixed Server Rejoining.\n\nRemoved NoClip Godmode (didnt worked)\n\nChanged Teleport\n\nEdited Colors(top players)"
+InfoText1.TextSize = 15
+InfoText1.TextWrapped = true
+InfoText1.Visible = false
+InfoText1.ZIndex = 7
+InfoText1.TextYAlignment = Enum.TextYAlignment.Top
+
+-- Close --
+
+Open.MouseButton1Down:connect(function()
+	TopFrame.Visible = false
+	MainFrame.Visible = true
 end)
-LocationsB.MouseButton1Click:Connect(function()
-	if LocationFrame.Visible == false then
-		LocationFrame.Visible = true
-	elseif LocationFrame.Visible == true then
-		LocationFrame.Visible = false
-		if Selected2.Value == "None" then
-		else
-		SPTSGui[Selected2.Value].Visible = false
+
+Minimize.MouseButton1Down:connect(function()
+	TopFrame.Visible = true
+	MainFrame.Visible = false
+end)
+
+Close.MouseButton1Down:connect(function()
+MainGUI:Destroy()
+end)
+
+-- Menus --
+
+local Menus = {
+	[WayPoints] = WayPointsFrame;
+	[FarmExp] = FarmExpFrame;
+	[Extras] = ExtrasFrame;
+}
+for button,frame in pairs(Menus) do
+	button.MouseButton1Click:connect(function()
+		if frame.Visible then
+			frame.Visible = false
+			return
+		end
+		for k,v in pairs(Menus) do
+			v.Visible = v == frame
+		end
+	end)
+end
+
+FarmBody.MouseEnter:connect(function()
+	FarmBodyLabel.Visible = true
+end)
+
+FarmBody.MouseLeave:connect(function()
+	FarmBodyLabel.Visible = false
+end)
+
+FarmSpeed.MouseEnter:connect(function()
+	FarmSpeedLabel.Visible = true
+end)
+
+FarmSpeed.MouseLeave:connect(function()
+	FarmSpeedLabel.Visible = false
+end)
+
+FarmJump.MouseEnter:connect(function()
+	FarmSpeedLabel.Visible = true
+end)
+
+FarmJump.MouseLeave:connect(function()
+	FarmSpeedLabel.Visible = false
+end)
+
+farmbtsafety.MouseEnter:connect(function()
+	farmbtsafetyText1.Visible = true
+end)
+
+farmbtsafety.MouseLeave:connect(function()
+	farmbtsafetyText1.Visible = false
+end)
+
+InfoScreen.MouseEnter:connect(function()
+	InfoText1.Visible = true
+end)
+
+InfoScreen.MouseLeave:connect(function()
+	InfoText1.Visible = false
+end)
+
+c.MouseButton1Down:connect(function()
+	cf.Visible = false
+end)
+
+-- Round Number to decimal places and convert to letter value --
+
+function round(num, numDecimalPlaces)
+	local mult = 10^(numDecimalPlaces or 0)
+	return math.floor(num * mult + 0.5) / mult
+end
+		
+function converttoletter(num)
+	if num / 1e21 >=1 then
+		newnum = num / 1e21
+		return round(newnum, 6).. "Sx"
+	elseif num / 1e18 >=1 then
+		newnum = num / 1e18
+		return round(newnum, 6).. "Qi"
+	elseif num / 1e15 >=1 then
+		newnum = num / 1e15
+		return round(newnum, 6).. "Qa"
+	elseif num / 1e12 >=1 then
+		newnum = num / 1e12
+		return round(newnum, 6).. "T"
+	elseif num / 1e09 >=1 then
+		newnum = num / 1e09
+		return round(newnum, 6).. "B"
+	elseif num / 1e06 >=1 then
+		newnum = num / 1e06
+		return round(newnum, 6).. "M"
+	elseif num / 1e03 >=1 then
+		newnum = num / 1e03
+		return round(newnum, 6).. "K"
+	else return num
+	end
+end
+
+--- Farm BT Safety ---
+
+farmbtsafety.MouseButton1Down:connect(function()
+	farmbtsafetyactive = not farmbtsafetyactive
+	if farmbtsafetyactive then
+		farmbtsafety.Text = "Safety Net: ON"
+		farmbtsafety.BackgroundColor3 = Color3.new(0, 0.5, 0)
+	else
+		farmbtsafety.Text = "Safety Net: OFF"
+		farmbtsafety.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmbtsafetyactive then
+			while farmbtsafetyactive do
+				local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+				local currenthealth = tonumber(string.format("%.0f", FindHum.Health))
+				local minhealth = tonumber(string.format("%.0f", FindHum.MaxHealth))*tonumber(farmbtsafetylevel.Text)/100
+				-- print("Current Health: " ..tostring(currenthealth).. ". Min Health: " ..tostring(minhealth))
+				if currenthealth <= minhealth then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459, 248, 887)
+				end
+			wait(0.2)
+			end
+		end
+		wait(0.5)
+	end
+end)
+
+-- Show Location --
+
+local curlocation = coroutine.wrap(function()
+	while true do
+		LocationX = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x, 0)
+		LocationY = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y, 0)
+		LocationZ = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z, 0)
+		ShowLocation.Text = "Coords: "..LocationX..", "..LocationY..", "..LocationZ
+		wait(0.5)
+	end
+end)
+
+curlocation()
+
+-- Set Locations --
+
+SetLocation.MouseButton1Down:connect(function()
+	function round(num, numDecimalPlaces)
+		local mult = 10^(numDecimalPlaces or 0)
+		return math.floor(num * mult + 0.5) / mult
+	end
+	setlocationx = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x, 0)
+	setlocationy = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y, 0)
+	setlocationz = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z, 0)
+	print("Set Custom Location: "..setlocationx..", "..setlocationy..", "..setlocationz)
+    SetLocation.Text = setlocationx..","..setlocationy..","..setlocationz
+	CustomLocationSet = true
+end)
+
+--- TP to custom location ---
+
+TPLocation.MouseButton1Down:connect(function()
+	if CustomLocationSet == true then
+		workspace:WaitForChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = CFrame.new(setlocationx, setlocationy, setlocationz)
+		WayPointsFrame.Visible = false
+	end
+end)
+
+Location1.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459, 248, 887)
+	WayPointsFrame.Visible = false
+end)
+	
+Location2.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(409, 271, 978)
+	WayPointsFrame.Visible = false
+end)
+
+LocationFS1B.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1176, 4789, -2293)
+	WayPointsFrame.Visible = false
+end)
+
+LocationFS10T.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-369, 15735, -9)
+	WayPointsFrame.Visible = false
+end)
+
+LocationFS100B.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1381, 9274, 1647)
+	WayPointsFrame.Visible = false
+end)
+
+Location7.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2279, 1944, 1053)
+	WayPointsFrame.Visible = false
+end)
+
+Location3.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(365, 249, -445)
+	settplocation = "BT100Area"
+	WayPointsFrame.Visible = false
+end)
+
+Location4.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(349, 263, -490)
+	settplocation = "BT10KArea"
+	WayPointsFrame.Visible = false
+end)
+
+Location5.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1640, 258, 2244)
+	settplocation = "BT100KArea"
+	WayPointsFrame.Visible = false
+end)
+
+Location6.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2307, 976, 1068)
+	settplocation = "BT1MArea"
+	WayPointsFrame.Visible = false
+end)
+
+Location8.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2024, 714, -1860)
+	settplocation = "BT10MArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationBT1B.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-254, 286, 980)
+	settplocation = "BT1BArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationBT100B.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-271, 279, 991)
+	settplocation = "BT100BArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationBT10T.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-279, 279, 1007)
+	settplocation = "BT10TArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationPP1M.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2527, 5486, -532)
+	settplocation = "PP1MArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationPP1B.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2560, 5500, -439)
+	settplocation = "PP1BArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationPP1T.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2582, 5516, -504)
+	settplocation = "PP1TArea"
+	WayPointsFrame.Visible = false
+end)
+
+LocationPP1Qa.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2544, 5412, -495)
+	settplocation = "PP1QaArea"
+	WayPointsFrame.Visible = false
+end)
+
+-- ESP Stuff --
+
+Run:BindToRenderStep("UpdateESP", Enum.RenderPriority.Character.Value, function()
+	for _, v in next, Plrs:GetPlayers() do
+		UpdateESP(v)
+	end
+end)
+
+-- Farm Exp --
+
+FarmAll.MouseButton1Click:Connect(function()
+	if farmallactive ~= true then
+		farmallactive = true
+		farmfistactive = true
+		farmbodyactive = true
+		farmspeedactive = true
+		farmpsychicactive = true
+		farmjumpactive = true
+		FarmAll.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmAll.Text = "Farm All: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmallactive = false
+		farmfistactive = false
+		farmbodyactive = false
+		farmspeedactive = false
+		farmpsychicactive = false
+		farmjumpactive = false
+		FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmBody.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmSpeed.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmJump.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmAll.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmAll.Text = "Farm All: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+FarmFist.MouseButton1Click:Connect(function()
+	if farmfistactive ~= true then
+		farmfistactive = true
+		FarmFist.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmFist.Text = "Farm Fist Strength: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmfistactive = false
+		FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmFist.Text = "Farm Fist Strength: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+FarmBody.MouseButton1Click:Connect(function()
+	if farmbodyactive ~= true then
+		farmbodyactive = true
+		FarmBody.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmBody.Text = "Farm Body Strength: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmbodyactive = false
+		FarmBody.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmBody.Text = "Farm Body Strength: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+FarmSpeed.MouseButton1Click:Connect(function()
+	if farmspeedactive ~= true then
+		farmspeedactive = true
+		FarmSpeed.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmSpeed.Text = "Farm Speed Strength: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmspeedactive = false
+		FarmSpeed.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmSpeed.Text = "Farm Speed Strength: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+FarmJump.MouseButton1Click:Connect(function()
+	if farmjumpactive ~= true then
+		farmjumpactive = true
+		FarmJump.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmJump.Text = "Farm Jump Strength: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmjumpactive = false
+		FarmJump.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmJump.Text = "Farm Jump Strength: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+FarmPsychic.MouseButton1Click:Connect(function()
+	if farmpsychicactive ~= true then
+		farmpsychicactive = true
+		FarmPsychic.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		FarmPsychic.Text = "Farm Psychic Strength: ON"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	else
+		farmpsychicactive = false
+		FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		FarmPsychic.Text = "Farm Psychic Strength: OFF"
+		FarmExp.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmfistactive and game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+			if tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.FistStrength.Value)) >= 10e12 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-369, 15735, -9)
+				fistarguments = {"+FS6"}
+				farmpsychicactive = false
+				FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmPsychic.Text = "Farm Psychic Strength: OFF"
+			elseif tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.FistStrength.Value)) >= 100e09 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1381, 9274, 1647)
+				fistarguments = {"+FS5"}
+				farmpsychicactive = false
+				FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmPsychic.Text = "Farm Psychic Strength: OFF"
+			elseif tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.FistStrength.Value)) >= 1e09 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1176, 4789, -2293)
+				fistarguments = {"+FS4"}
+				farmpsychicactive = false
+				FarmPsychic.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmPsychic.Text = "Farm Psychic Strength: OFF"
+			else
+				fistarguments = {"+FS3", "+FS2", "+FS1"}
+			end
+			while farmfistactive do
+				game:GetService('RunService').Stepped:wait()
+				for i,v in pairs(fistarguments) do
+					game.ReplicatedStorage.RemoteEvent:FireServer({[1] = v})
+				end
+			end
+		end
+		wait(1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmbodyactive and game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+			while farmbodyactive do
+				local bodyarguments = {"+BT5", "+BT4", "+BT3", "+BT2", "+BT1"}
+				local event = game.ReplicatedStorage.RemoteEvent
+				for i,v in pairs(bodyarguments) do
+					event:FireServer({[1] = v})
+					wait()
+				end
+				wait()
+			end
+		end
+		wait(1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmspeedactive and game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+			while farmspeedactive do
+				local speedarguments = {"+MS5", "+MS4", "+MS3", "+MS2", "+MS1"}
+				local event = game.ReplicatedStorage.RemoteEvent
+				for i,v in pairs(speedarguments) do
+					event:FireServer({[1] = v})
+					wait()
+				end
+				wait()
+			end
+		end
+		wait(1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmjumpactive and game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+			while farmjumpactive do
+				local jumparguments = {"+JF5", "+JF4", "+JF3", "+JF2", "+JF1"}
+				local event = game.ReplicatedStorage.RemoteEvent
+				for i,v in pairs(jumparguments) do
+					event:FireServer({[1] = v})
+					wait()
+				end
+				wait()
+			end
+		end
+		wait(1)
+	end
+end)
+
+spawn(function()
+	while true do
+		if farmpsychicactive and game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+			if tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.PsychicPower.Value)) >= 1e15 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2544, 5412, -495)
+				psychicarguments = {"+PP6"}
+				farmfistactive = false
+				FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmFist.Text = "Farm Fist Strength: OFF"
+			elseif tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.PsychicPower.Value)) >= 1e12 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2582, 5516, -504)
+				psychicarguments = {"+PP5"}
+				farmfistactive = false
+				FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmFist.Text = "Farm Fist Strength: OFF"
+			elseif tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.PsychicPower.Value)) >= 1e09 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2560, 5500, -439)
+				psychicarguments = {"+PP4"}
+				farmfistactive = false
+				FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmFist.Text = "Farm Fist Strength: OFF"
+			elseif tonumber(string.format("%.0f", game.Players.LocalPlayer.PrivateStats.PsychicPower.Value)) >= 1e06 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2527, 5486, -532)
+				psychicarguments = {"+PP3"}
+				farmfistactive = false
+				FarmFist.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+				FarmFist.Text = "Farm Fist Strength: OFF"
+			else
+				psychicarguments = {"+PP2", "+PP1"}
+			end
+			while farmpsychicactive do
+				game:GetService('RunService').Stepped:wait()
+				for i,v in pairs(psychicarguments) do
+					game.ReplicatedStorage.RemoteEvent:FireServer({[1] = v})
+				end
+			end
+		end
+		wait(1)
+	end
+end)
+
+-- Return to position on Death --
+
+DeathReturn.MouseButton1Click:Connect(function()
+	if deathreturnactive ~= true then
+		deathreturnactive = true
+		DeathReturn.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		DeathReturn.Text = "Respawn Return: ON"
+	else
+		deathreturnactive = false
+		DeathReturn.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		DeathReturn.Text = "Respawn Return: OFF"
+	end
+end)
+
+spawn(function()
+	while true do
+		if deathreturnactive then
+			player = game:GetService("Players").LocalPlayer
+			player.Character.Humanoid.Died:connect(function()
+				playerdied = true
+			end)
+		end
+		if not playerdied then
+			lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+			lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+			lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+			SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz
+			--print(tostring(SavePosition.Text))
+			wait(0.5)
+		end
+		if playerdied then
+			--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Died")
+			--print(tostring(SavePosition.Text))
+			wait(5)
+			game:GetService("ReplicatedStorage").RemoteEvent:FireServer({[1] = "Respawn"})
+			wait(1)
+			game.Lighting.Blur.Enabled = false
+            game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+            game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+			wait(5)
+			--print("screengui disabled")
+			repeat wait(0.1) until game.Players.LocalPlayer.Character.Humanoid
+			--print("Teleporting back to " ..tostring(SavePosition.Text))
+			if deathreturnactive then
+				local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+			end
+			playerdied = false
+		end
+		wait(1)
+	end		
+end)
+
+-- Annoy Player --
+
+AnnoyStart.MouseButton1Click:Connect(function()
+	if annoyplayeractive ~= true then
+		annoyplayeractive = true
+		AnnoyStart.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		AnnoyStart.Text = "TP Spam Player: ON"
+	else
+		annoyplayeractive = false
+		AnnoyStart.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		AnnoyStart.Text = "TP Spam Player: OFF"
+	end
+end)
+
+spawn(function()
+	while true do
+		wait(0.5)
+		if annoyplayeractive then
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				if v.Name:lower():find(AnnoyName.Text:lower()) then
+					player = game.Players.LocalPlayer.Character
+					local startpos = player.HumanoidRootPart.CFrame
+					v.Character.Humanoid.Died:connect(function()
+						annoyplayeractive = false
+						AnnoyStart.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+						AnnoyStart.Text = "TP Spam Player: OFF"
+					end)
+					player.Humanoid.Died:connect(function()
+						annoyplayeractive = false
+						AnnoyStart.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+						AnnoyStart.Text = "TP Spam Player: OFF"
+					end)
+					while annoyplayeractive == true do
+						player.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+						wait(.005)
+					end
+					player.HumanoidRootPart.CFrame = startpos
+				end
+			end
 		end
 	end
 end)
-Credits.MouseButton1Click:Connect(function()
-	if CreditsFrame.Visible == false then
-		CreditsFrame.Visible = true
-	elseif CreditsFrame.Visible == true then
-		CreditsFrame.Visible = false
-	end
-end)
 
-
-
-
-
-
-
-
-
-
-
-KButton.MouseButton1Click:Connect(function()
-	for i = 1,300 do
-		game.Workspace[Name.Text].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-		wait()
-	end
-end)
-KButton6.MouseButton1Click:Connect(function()
-	for i = 1,300 do
-		if game.Workspace[Name.Text].Humanoid.MaxHealth <= game.Players.LocalPlayer.Character.Humanoid.MaxHealth*3 then
-		game.Workspace[Name.Text].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-		wait()
+TptoPlayer.MouseButton1Click:Connect(function()
+	for i,v in pairs(game:GetService("Players"):GetChildren()) do
+		if v.Name:lower():find(AnnoyName.Text:lower()) then
+			if v.Name ~= tostring(MyPlr.Name) then
+				player = game.Players.LocalPlayer.Character
+				player.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(3, 0, 3)
+			end
 		end
-		end
-end)
-
-KButton2.MouseButton1Click:Connect(function()
-	    run = not run
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-    if run then
-    while wait() do
-    if run then
-    tp()
-    end
-    end
-    end
-    end)
-KButton7.MouseButton1Click:Connect(function()
-	    run2 = not run2
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Character:FindFirstChild("Humanoid").MaxHealth <= game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").MaxHealth then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run2 then
-    while wait() do
-    if run2 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton3.MouseButton1Click:Connect(function()
-	    run3 = not run3
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value == 0 then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run3 then
-    while wait() do
-    if run3 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton4.MouseButton1Click:Connect(function()
-	    run4 = not run4
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value >= 1 then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run4 then
-    while wait() do
-    if run4 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton5.MouseButton1Click:Connect(function()
-	    run5 = not run5
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value <= -1 then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run5 then
-    while wait() do
-    if run5 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton8.MouseButton1Click:Connect(function()
-	    run6 = not run6
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value == 0 and player.Character:FindFirstChild("Humanoid").MaxHealth <= game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").MaxHealth  then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run6 then
-    while wait() do
-    if run6 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton9.MouseButton1Click:Connect(function()
-	    run7 = not run7
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value >= 1 and player.Character:FindFirstChild("Humanoid").MaxHealth <= game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").MaxHealth  then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run7 then
-    while wait() do
-    if run7 then
-    tp()
-    end
-    end
-    end
-    end)
-KButton10.MouseButton1Click:Connect(function()
-	    run8 = not run8
-    local function tp()
-    for i, player in ipairs(game.Players:GetChildren()) do
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and game.Players[player.Name].PrivateStats.Reputation.Value <= -1 and player.Character:FindFirstChild("Humanoid").MaxHealth <= game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").MaxHealth  then
-    player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
-    end
-    end
-    end
-     
-    if run8 then
-    while wait() do
-    if run8 then
-    tp()
-    end
-    end
-    end
-    end)
-OPEN.MouseButton1Click:Connect(function()
-	if SPTSGui[Selected.Value].Visible == true then
-		SPTSGui[Selected.Value].Visible = false
-	elseif SPTSGui[Selected.Value].Visible == false then
-		SPTSGui[Selected.Value].Visible = true
 	end
 end)
-SafeMode.MouseButton1Click:Connect(function()
-	Selected.Value = "SafeFR"
-	UnSafeFR.Visible = false
-	SafeFR.Visible = true
+
+mouse.KeyDown:connect(function(key)
+	if key == tostring(PanicToggle.Text) then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459, 248, 887)
+	end
 end)
-SafeMode_2.MouseButton1Click:Connect(function()
-	Selected.Value = "UnSafeFR"
-	UnSafeFR.Visible = true
-	SafeFR.Visible = false
+
+-- ESP --
+
+esptrack.MouseButton1Click:connect(function()
+	ESPEnabled = not ESPEnabled
+	if ESPEnabled then
+		esptrack.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		for _, v in next, Plrs:GetPlayers() do
+			if v ~= MyPlr then
+				if CharAddedEvent[v.Name] == nil then
+					CharAddedEvent[v.Name] = v.CharacterAdded:connect(function(Char)
+						if ESPEnabled then
+							RemoveESP(v)
+							CreateESP(v)
+						end
+						repeat wait() until Char:FindFirstChild("HumanoidRootPart")
+					end)
+				end
+				RemoveESP(v)
+				CreateESP(v)
+			end
+		end
+	else
+		esptrack.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+		for _, v in next, Plrs:GetPlayers() do
+			RemoveESP(v)
+		end
+	end
+end)
+
+-- Server Player Stats --
+
+PlayerInfo.MouseButton1Click:connect(function()
+	if not showtopplayersactive then
+		showtopplayersactive = true
+		showtopplayersfistactive = true
+		showtopplayersbodyactive = true
+		showtopplayersspeedactive = true
+		showtopplayersjumpactive = true
+		showtopplayerspsychicactive = true
+		PlayerInfoStatsFrame.Visible = true
+	else
+		showtopplayersactive = false
+		PlayerInfoStatsFrame.Visible = false
+		showtopplayersfistactive = false
+		showtopplayersbodyactive = false
+		showtopplayersspeedactive = false
+		showtopplayersjumpactive = false
+		showtopplayerspsychicactive = false
+	end
+end)
+
+PlayerInfoStatsClose.MouseButton1Click:connect(function()
+	showtopplayersactive = false
+	PlayerInfoStatsFrame.Visible = false
+	showtopplayersfistactive = false
+	showtopplayersbodyactive = false
+	showtopplayersspeedactive = false
+	showtopplayersjumpactive = false
+	showtopplayerspsychicactive = false
+end)
+
+spawn(function()
+	while true do
+		if showtopplayersfistactive then
+			BestPlayerFist = 1
+			PlayerFistName = false
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				local PlayerFist = tonumber(game.Players[v.Name].PrivateStats.FistStrength.Value)
+				if PlayerFist > tonumber(BestPlayerFist) then 
+					BestPlayerFist = PlayerFist
+					PlayerFistName = tostring(v.Name)
+				end
+			end
+			StatBestFistText1.Text = "Fist: " ..tostring(PlayerFistName)
+			local fistplrStatus = game.Players[PlayerFistName].leaderstats.Status
+			if fistplrStatus.Value == "Criminal" then
+				StatBestFistText1.TextColor3 = Color3.new(1, 0.1, 1)
+			elseif fistplrStatus.Value == "Lawbreaker" then
+				StatBestFistText1.TextColor3 = Color3.new(1, 0.1, 0.1)
+			elseif fistplrStatus.Value == "Guardian" then
+				StatBestFistText1.TextColor3 = Color3.new(0.1, 0.8, 1)
+			elseif fistplrStatus.Value == "Protector" then
+				StatBestFistText1.TextColor3 = Color3.new(0.1, 0.1, 1)
+			elseif fistplrStatus.Value == "Supervillain" then
+				StatBestFistText1.TextColor3 = Color3.new(0.3, 0.1, 0.1)
+			elseif fistplrStatus.Value == "Superhero" then
+				StatBestFistText1.TextColor3 = Color3.new(0, 0.6, 1)
+			else
+				StatBestFistText1.TextColor3 = Color3.new(1, 1, 1)
+			end
+			local FindHum = game.Players[PlayerFistName].Character.Humanoid
+			local FistPlayerHealth = converttoletter(string.format("%.0f", FindHum.Health))
+			local FistPlayerFist = converttoletter(string.format("%.0f", game.Players[PlayerFistName].PrivateStats.FistStrength.Value))
+			local FistPlayerBody = converttoletter(string.format("%.0f", game.Players[PlayerFistName].PrivateStats.BodyToughness.Value))
+			local FistPlayerSpeed = converttoletter(string.format("%.0f", game.Players[PlayerFistName].PrivateStats.MovementSpeed.Value))
+			local FistPlayerJump = converttoletter(string.format("%.0f", game.Players[PlayerFistName].PrivateStats.JumpForce.Value))
+			local FistPlayerPsychic = converttoletter(string.format("%.0f", game.Players[PlayerFistName].PrivateStats.PsychicPower.Value))
+			ShowStatsFist2.Text = tostring(FistPlayerHealth.. "\n" ..FistPlayerFist.. "\n" ..FistPlayerBody.. "\n" ..FistPlayerSpeed.. "\n" ..FistPlayerJump.. "\n" ..FistPlayerPsychic)
+		end
+		wait(0.3)
+	end
+end)
+
+spawn(function()
+	while true do
+		if showtopplayersbodyactive then
+			BestPlayerBody = 1
+			PlayerBodyName = false
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				local PlayerBody = tonumber(game.Players[v.Name].PrivateStats.BodyToughness.Value)
+				if PlayerBody > tonumber(BestPlayerBody) then 
+					BestPlayerBody = PlayerBody
+					PlayerBodyName = tostring(v.Name)
+				end
+			end
+			StatBestBodyText1.Text = "Body: " ..tostring(PlayerBodyName)
+			local bodyplrStatus = game.Players[PlayerBodyName].leaderstats.Status
+			if bodyplrStatus.Value == "Criminal" then
+				StatBestBodyText1.TextColor3 = Color3.new(1, 0.1, 1)
+			elseif bodyplrStatus.Value == "Lawbreaker" then
+				StatBestBodyText1.TextColor3 = Color3.new(1, 0.1, 0.1)
+			elseif bodyplrStatus.Value == "Guardian" then
+				StatBestBodyText1.TextColor3 = Color3.new(0.1, 0.8, 1)
+			elseif bodyplrStatus.Value == "Protector" then
+				StatBestBodyText1.TextColor3 = Color3.new(0.1, 0.1, 1)
+			elseif bodyplrStatus.Value == "Supervillain" then
+				StatBestBodyText1.TextColor3 = Color3.new(0.3, 0.1, 0.1)
+			elseif bodyplrStatus.Value == "Superhero" then
+				StatBestBodyText1.TextColor3 = Color3.new(0, 0.6, 1)
+			else
+				StatBestBodyText1.TextColor3 = Color3.new(1, 1, 1)
+			end
+			local FindHum = game.Players[PlayerBodyName].Character.Humanoid
+			local BodyPlayerHealth = converttoletter(string.format("%.0f", FindHum.Health))
+			local BodyPlayerFist = converttoletter(string.format("%.0f", game.Players[PlayerBodyName].PrivateStats.FistStrength.Value))
+			local BodyPlayerBody = converttoletter(string.format("%.0f", game.Players[PlayerBodyName].PrivateStats.BodyToughness.Value))
+			local BodyPlayerSpeed = converttoletter(string.format("%.0f", game.Players[PlayerBodyName].PrivateStats.MovementSpeed.Value))
+			local BodyPlayerJump = converttoletter(string.format("%.0f", game.Players[PlayerBodyName].PrivateStats.JumpForce.Value))
+			local BodyPlayerPsychic = converttoletter(string.format("%.0f", game.Players[PlayerBodyName].PrivateStats.PsychicPower.Value))
+			ShowStatsBody2.Text = tostring(BodyPlayerHealth.. "\n" ..BodyPlayerFist.. "\n" ..BodyPlayerBody.. "\n" ..BodyPlayerSpeed.. "\n" ..BodyPlayerJump.. "\n" ..BodyPlayerPsychic)
+		end
+		wait(0.3)
+	end
+end)
+
+spawn(function()
+	while true do
+		if showtopplayersspeedactive then
+			BestPlayerSpeed = 1
+			PlayerSpeedName = false
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				local PlayerSpeed = tonumber(game.Players[v.Name].PrivateStats.MovementSpeed.Value)
+				if PlayerSpeed > tonumber(BestPlayerSpeed) then 
+					BestPlayerSpeed = PlayerSpeed
+					PlayerSpeedName = tostring(v.Name)
+				end
+			end
+			StatBestSpeedText1.Text = "Speed: " ..tostring(PlayerSpeedName)
+			local speedplrStatus = game.Players[PlayerSpeedName].leaderstats.Status
+			if speedplrStatus.Value == "Criminal" then
+				StatBestSpeedText1.TextColor3 = Color3.new(1, 0.1, 1)
+			elseif speedplrStatus.Value == "Lawbreaker" then
+				StatBestSpeedText1.TextColor3 = Color3.new(1, 0.1, 0.1)
+			elseif speedplrStatus.Value == "Guardian" then
+				StatBestSpeedText1.TextColor3 = Color3.new(0.1, 0.8, 1)
+			elseif speedplrStatus.Value == "Protector" then
+				StatBestSpeedText1.TextColor3 = Color3.new(0.1, 0.1, 1)
+			elseif speedplrStatus.Value == "Supervillain" then
+				StatBestSpeedText1.TextColor3 = Color3.new(0.3, 0.1, 0.1)
+			elseif speedplrStatus.Value == "Superhero" then
+				StatBestSpeedText1.TextColor3 = Color3.new(0, 0.6, 1)
+			else
+				StatBestSpeedText1.TextColor3 = Color3.new(1, 1, 1)
+			end
+			local FindHum = game.Players[PlayerSpeedName].Character.Humanoid
+			local SpeedPlayerHealth = converttoletter(string.format("%.0f", FindHum.Health))
+			local SpeedPlayerFist = converttoletter(string.format("%.0f", game.Players[PlayerSpeedName].PrivateStats.FistStrength.Value))
+			local SpeedPlayerBody = converttoletter(string.format("%.0f", game.Players[PlayerSpeedName].PrivateStats.BodyToughness.Value))
+			local SpeedPlayerSpeed = converttoletter(string.format("%.0f", game.Players[PlayerSpeedName].PrivateStats.MovementSpeed.Value))
+			local SpeedPlayerJump = converttoletter(string.format("%.0f", game.Players[PlayerSpeedName].PrivateStats.JumpForce.Value))
+			local SpeedPlayerPsychic = converttoletter(string.format("%.0f", game.Players[PlayerSpeedName].PrivateStats.PsychicPower.Value))
+			ShowStatsSpeed2.Text = tostring(SpeedPlayerHealth.. "\n" ..SpeedPlayerFist.. "\n" ..SpeedPlayerBody.. "\n" ..SpeedPlayerSpeed.. "\n" ..SpeedPlayerJump.. "\n" ..SpeedPlayerPsychic)
+		end
+		wait(0.3)
+	end
+end)
+
+spawn(function()
+	while true do
+		if showtopplayersjumpactive then
+			BestPlayerJump = 1
+			PlayerJumpName = false
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				local PlayerJump = tonumber(game.Players[v.Name].PrivateStats.JumpForce.Value)
+				if PlayerJump > tonumber(BestPlayerJump) then 
+					BestPlayerJump = PlayerJump
+					PlayerJumpName = tostring(v.Name)
+				end
+			end
+			StatBestJumpText1.Text = "Jump: " ..tostring(PlayerJumpName)
+			local JumpplrStatus = game.Players[PlayerJumpName].leaderstats.Status
+			if JumpplrStatus.Value == "Criminal" then
+				StatBestJumpText1.TextColor3 = Color3.new(1, 0.1, 1)
+			elseif JumpplrStatus.Value == "Lawbreaker" then
+				StatBestJumpText1.TextColor3 = Color3.new(1, 0.1, 0.1)
+			elseif JumpplrStatus.Value == "Guardian" then
+				StatBestJumpText1.TextColor3 = Color3.new(0.1, 0.8, 1)
+			elseif JumpplrStatus.Value == "Protector" then
+				StatBestJumpText1.TextColor3 = Color3.new(0.1, 0.1, 1)
+			elseif JumpplrStatus.Value == "Supervillain" then
+				StatBestJumpText1.TextColor3 = Color3.new(0.3, 0.1, 0.1)
+			elseif JumpplrStatus.Value == "Superhero" then
+				StatBestJumpText1.TextColor3 = Color3.new(0, 0.6, 1)
+			else
+				StatBestJumpText1.TextColor3 = Color3.new(1, 1, 1)
+			end
+			local FindHum = game.Players[PlayerJumpName].Character.Humanoid
+			local JumpPlayerHealth = converttoletter(string.format("%.0f", FindHum.Health))
+			local JumpPlayerFist = converttoletter(string.format("%.0f", game.Players[PlayerJumpName].PrivateStats.FistStrength.Value))
+			local JumpPlayerBody = converttoletter(string.format("%.0f", game.Players[PlayerJumpName].PrivateStats.BodyToughness.Value))
+			local JumpPlayerSpeed = converttoletter(string.format("%.0f", game.Players[PlayerJumpName].PrivateStats.MovementSpeed.Value))
+			local JumpPlayerJump = converttoletter(string.format("%.0f", game.Players[PlayerJumpName].PrivateStats.JumpForce.Value))
+			local JumpPlayerPsychic = converttoletter(string.format("%.0f", game.Players[PlayerJumpName].PrivateStats.PsychicPower.Value))
+			ShowStatsJump2.Text = tostring(JumpPlayerHealth.. "\n" ..JumpPlayerFist.. "\n" ..JumpPlayerBody.. "\n" ..JumpPlayerSpeed.. "\n" ..JumpPlayerJump.. "\n" ..JumpPlayerPsychic)
+		end
+		wait(0.3)
+	end
+end)
+
+spawn(function()
+	while true do
+		if showtopplayerspsychicactive then
+			BestPlayerPsychic = 1
+			PlayerPsychicName = false
+			for i,v in pairs(game:GetService("Players"):GetChildren()) do
+				local PlayerPsychic = tonumber(game.Players[v.Name].PrivateStats.PsychicPower.Value)
+				if PlayerPsychic > tonumber(BestPlayerPsychic) then 
+					BestPlayerPsychic = PlayerPsychic
+					PlayerPsychicName = tostring(v.Name)
+				end
+			end
+			StatBestPsychicText1.Text = "Psy: " ..tostring(PlayerPsychicName)
+			local PsychicplrStatus = game.Players[PlayerPsychicName].leaderstats.Status
+			if PsychicplrStatus.Value == "Criminal" then
+				StatBestPsychicText1.TextColor3 = Color3.new(1, 0.1, 1)
+			elseif PsychicplrStatus.Value == "Lawbreaker" then
+				StatBestPsychicText1.TextColor3 = Color3.new(1, 0.1, 0.1)
+			elseif PsychicplrStatus.Value == "Guardian" then
+				StatBestPsychicText1.TextColor3 = Color3.new(0.1, 0.8, 1)
+			elseif PsychicplrStatus.Value == "Protector" then
+				StatBestPsychicText1.TextColor3 = Color3.new(0.1, 0.1, 1)
+			elseif PsychicplrStatus.Value == "Supervillain" then
+				StatBestPsychicText1.TextColor3 = Color3.new(0.3, 0.1, 0.1)
+			elseif PsychicplrStatus.Value == "Superhero" then
+				StatBestPsychicText1.TextColor3 = Color3.new(0, 0.6, 1)
+			else
+				StatBestPsychicText1.TextColor3 = Color3.new(1, 1, 1)
+			end
+			local FindHum = game.Players[PlayerPsychicName].Character.Humanoid
+			local PsychicPlayerHealth = converttoletter(string.format("%.0f", FindHum.Health))
+			local PsychicPlayerFist = converttoletter(string.format("%.0f", game.Players[PlayerPsychicName].PrivateStats.FistStrength.Value))
+			local PsychicPlayerBody = converttoletter(string.format("%.0f", game.Players[PlayerPsychicName].PrivateStats.BodyToughness.Value))
+			local PsychicPlayerSpeed = converttoletter(string.format("%.0f", game.Players[PlayerPsychicName].PrivateStats.MovementSpeed.Value))
+			local PsychicPlayerJump = converttoletter(string.format("%.0f", game.Players[PlayerPsychicName].PrivateStats.JumpForce.Value))
+			local PsychicPlayerPsychic = converttoletter(string.format("%.0f", game.Players[PlayerPsychicName].PrivateStats.PsychicPower.Value))
+			ShowStatsPsychic2.Text = tostring(PsychicPlayerHealth.. "\n" ..PsychicPlayerFist.. "\n" ..PsychicPlayerBody.. "\n" ..PsychicPlayerSpeed.. "\n" ..PsychicPlayerJump.. "\n" ..PsychicPlayerPsychic)
+		end
+		wait(0.3)
+	end
+end)
+--- ReJoin Server ---
+
+ReJoinServer.MouseButton1Click:connect(function()
+	local placeId = 10710676163
+	game:GetService("TeleportService"):Teleport(placeId)
 end)
